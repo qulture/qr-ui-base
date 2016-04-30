@@ -1,21 +1,35 @@
 .qr-panel {
   background: white;
   margin-bottom: 2 * $gutter;
-  &.transparent { background: transparentize(#000000, 0.84); }
+  &.transparent {
+    background: transparentize(#000000, 0.84);
+
+    * { color: white; }
+  }
 }
 
-.qr-panel-header,
-.qr-panel-footer,
 .qr-panel-content {
-  padding: rem(17) $panel-padding;
+  padding: $panel-padding;
 }
 
 .qr-panel-footer {
+  @include display(flex);
+  @include justify-content(space-between);
+  @include align-items(center);
+  @include flex-wrap(wrap);
   border-top: 1px solid $light-detail-1-color;
-  color: $detail-3-color;
+
+  & > * {
+    margin: 0;
+    font-size: $s-font-size;
+    flex-grow: 1;
+    padding: rem(17) $panel-padding;
+    &:not(.qr-panel-footer-link) { color: $detail-3-color; }
+  }
 }
 
 .qr-panel-header {
+  padding: rem(17) $panel-padding;
   padding-bottom: 0;
 
   h2,
@@ -24,4 +38,11 @@
     margin: 0;
     font-weight: 400;
   }
+}
+
+.qr-panel-footer-link {
+  display: block;
+  font-size: $s-font-size;
+  text-transform: uppercase;
+  text-align: center;
 }
