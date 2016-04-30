@@ -1,15 +1,17 @@
+$panel-link-border-color: $light-detail-1-color;
+$transparent-panel-link-border-color: transparentize($light-detail-1-color, 0.8);
+
 .qr-panel {
   background: white;
   margin-bottom: 2 * $gutter;
-  &.transparent {
-    background: transparentize(#000000, 0.84);
-
-    * { color: white; }
-  }
 }
 
 .qr-panel-content {
   padding: $panel-padding;
+
+  & > * {
+    color: $detail-3-color;
+  }
 }
 
 .qr-panel-footer {
@@ -17,13 +19,14 @@
   @include justify-content(space-between);
   @include align-items(center);
   @include flex-wrap(wrap);
-  border-top: 1px solid $light-detail-1-color;
+  border-top: 1px solid $panel-link-border-color;
 
   & > * {
     margin: 0;
     font-size: $s-font-size;
-    flex-grow: 1;
-    padding: rem(17) $panel-padding;
+    @include flex-grow(1);
+    @include flex(1);
+    padding: $panel-padding;
     &:not(.qr-panel-footer-link) { color: $detail-3-color; }
   }
 }
@@ -35,6 +38,7 @@
   h2,
   h3,
   h4 {
+    color: $detail-2-color;
     margin: 0;
     font-weight: 400;
   }
@@ -45,4 +49,21 @@
   font-size: $s-font-size;
   text-transform: uppercase;
   text-align: center;
+  &:not(:last-of-type) { border-right: solid 1px $light-detail-1-color; }
+}
+
+.qr-panel.transparent {
+  background: transparentize(#000000, 0.84);
+
+  .qr-panel-header {
+    h2,
+    h3,
+    h4 {
+      font-weight: 300;
+    }
+  }
+
+  * { color: white; }
+  .qr-panel-footer { border-color: $transparent-panel-link-border-color; }
+  .qr-panel-footer-link { border-color: $transparent-panel-link-border-color; }
 }

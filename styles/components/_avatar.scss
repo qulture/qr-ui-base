@@ -23,7 +23,7 @@
 
     &.small {
       @include size(rem(40));
-      .qr-initials{ font-size: rem(16); }
+      .qr-initials { font-size: rem(16); }
     }
   }
 
@@ -49,7 +49,12 @@
 
     &.small {
       margin-left: rem(14);
-      h4 { font-size: $m-font-size; }
+
+      h4 {
+        font-weight: 100;
+        letter-spacing: 1.1;
+        font-size: $m-font-size;
+      }
     }
   }
 }
