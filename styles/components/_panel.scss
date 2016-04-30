@@ -1,7 +1,10 @@
 .qr-panel {
   background: white;
-  padding: $panel-padding;
   margin-bottom: 2 * $gutter;
-
   &.transparent { background: transparentize(#000000, 0.84); }
+}
+
+.qr-panel-footer {
+  padding: rem(17) $panel-padding;
+  border-top: 1px solid $light-detail-1-color;
 }
