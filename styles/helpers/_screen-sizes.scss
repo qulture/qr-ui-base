@@ -1,0 +1,31 @@
+@media only screen and (max-width: $small-breakpoint) {
+  .hide-s{ display: none; }
+}
+
+@media only screen and (min-width: $small-breakpoint) and (max-width: $large-breakpoint) {
+  .hide-m{ display: none; }
+}
+
+@media only screen and (max-width: $large-breakpoint) {
+  .hide-m-down{ display: none; }
+}
+
+@media only screen and (min-width: $large-breakpoint) and (max-width: $x-large-breakpoint) {
+  .hide-l{ display: none; }
+}
+
+@media only screen and (max-width: $x-large-breakpoint) {
+  .hide-l-down{ display: none; }
+}
+
+@media only screen and (min-width: $x-large-breakpoint) and (max-width: $xx-large-breakpoint) {
+  .hide-xl{ display: none; }
+}
+
+@media only screen and (max-width: $xx-large-breakpoint) {
+  .hide-xl-down{ display: none; }
+}
+
+@media only screen and (min-width: $xx-large-breakpoint) {
+  .hide-xxl{ display: none; }
+}

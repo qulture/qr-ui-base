@@ -1,0 +1,52 @@
+.qr-sidebar {
+  display: none;
+}
+
+@media (min-width: $small-breakpoint) {
+  .qr-sidebar {
+    display: block;
+    background: $light-detail-2-color;
+    max-width: 30%;
+
+    &.small {
+      max-width: 20%;
+    }
+  }
+
+  .qr-sidebar-section {
+    display: block;
+    padding: rem(33);
+  }
+
+  .qr-sidebar-section-title {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(space-between);
+
+    h3 {
+      font-family: $futura;
+      font-size: rem(20);
+      text-transform: uppercase;
+    }
+  }
+
+  .qr-sidebar-section-content {
+    &, * {
+      color: $detail-2-color;
+    }
+  }
+
+  .with-sidebar,
+  .with-small-sidebar {
+    @include display(flex);
+    @include flex-wrap(wrap);
+  }
+
+  .with-sidebar > * {
+    width: 70%;
+  }
+
+  .with-small-sidebar > * {
+    width: 80%;
+  }
+}

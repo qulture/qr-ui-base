@@ -1,0 +1,144 @@
+$logo-wrapper-height: rem(100);
+$menu-height: rem(200);
+$small-menu-height: $menu-height / 3;
+$menu-icon-size: rem(52);
+$menu-item-width: rem(94);
+$menu-item-font-size: rem(11);
+
+.qr-menu{
+  z-index: 99;
+  height: $logo-wrapper-height;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include main-background-color;
+
+  &.transparent:not(.sticky) {
+    background: none;
+  }
+}
+
+.qr-logo{
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  text-align: center;
+  height: $logo-wrapper-height;
+  background: $detail-1-color;
+  width: 100%;
+
+  & > span {
+    text-transform: uppercase;
+    letter-spacing: 1.57px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: $futura;
+    font-size: rem(24);
+  }
+}
+
+.qr-menu-user-info,
+.active-icon,
+.qr-nav-links {
+  display: none;
+}
+
+.qr-menu-item {
+  // TODO: Mobile style
+}
+
+@media (min-width: $small-breakpoint) {
+  .qr-menu {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    position: absolute;
+    height: $menu-height;
+  }
+
+  .qr-logo{
+    width: 25%;
+  }
+
+  .qr-nav-links {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(flex-end);
+    @include flex(1);
+    padding-right: $content-padding;
+  }
+
+  .qr-menu-item {
+    @include display(flex);
+    @include align-items(center);
+    @include flex-direction(column);
+    width: $menu-item-width;
+    text-align: center;
+
+    img {
+      max-width: $menu-icon-size;
+    }
+
+    .qr-link-name {
+      display: inline-block;
+      padding-top: rem(12);
+      font-size: $menu-item-font-size;
+      text-transform: uppercase;
+      color: white;
+      letter-spacing: 1.71px;
+    }
+
+    .active-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: rem(32);
+      margin-left: ($menu-item-width - rem(32)) / 2;
+    }
+  }
+
+  .qr-menu-user-info {
+    padding-left: rem(22);
+    display: block;
+
+    .qr-dropdown-label,
+    .qr-menu-company {
+      color: white;
+      margin: 0;
+    }
+
+    .qr-dropdown-label { font-size: $l-font-size; }
+  }
+
+  .qr-menu.sticky {
+    position: fixed;
+    min-height: auto;
+    box-shadow: $common-shaddow;
+
+    &,
+    .qr-logo {
+      padding: rem(0);
+      height: $small-menu-height / 1.4;
+      & > span { font-size: rem(18); }
+    }
+
+    .qr-menu-item .qr-link-name,
+    .qr-menu-company,
+    .active-icon {
+      display: none;
+    }
+
+    .qr-menu-user-info .qr-dropdown-label {
+      font-size: $font-size;
+    }
+
+    .qr-menu-item img {
+      max-width: rem(32);
+    }
+  }
+}

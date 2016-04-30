@@ -1,0 +1,21 @@
+.qr-notification {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  background: $light-detail-2-color;
+  box-shadow: $common-shaddow;
+  padding: rem(18);
+
+  &.info { background: lighten($info-color, 20%); }
+  &.success { background: lighten($success-color, 10%); }
+  &.warn { background: lighten($warn-color, 10%); }
+  &.alert { background: lighten($alert-color, 30%); }
+
+  @media (min-width: $small-breakpoint) {
+    bottom: rem(6);
+    max-width: rem(350);
+  }
+}

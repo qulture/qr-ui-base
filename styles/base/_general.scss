@@ -1,0 +1,19 @@
+*, * *{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.clicable{
+  cursor: pointer;
+}

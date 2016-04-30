@@ -1,0 +1,17 @@
+#{$all-text-inputs} {
+  outline: none;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 $input-padding;
+  font-size: rem(20);
+  border: none;
+  min-height: rem(60);
+}
+
+@media (min-width: $small-breakpoint) {
+  #{$all-text-inputs} {
+    text-align: left;
+  }
+}

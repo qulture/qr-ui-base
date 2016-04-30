@@ -1,0 +1,16 @@
+$xxl-font-size: rem(44);
+$xl-font-size: rem(32);
+$l-font-size: rem(28);
+$m-font-size: rem(22);
+$font-size: rem(18);
+$s-font-size: rem(14);
+$xs-font-size: rem(12);
+
+$font-sizes: (
+  ('xxl', $xxl-font-size),
+  ('xl', $xl-font-size),
+  ('l', $l-font-size),
+  ('m', $m-font-size),
+  ('s', $s-font-size),
+  ('xs', $xs-font-size),
+);

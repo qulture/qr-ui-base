@@ -1,0 +1,55 @@
+$boxed-top-bottom-padding: rem(6);
+$boxed-sides-padding: $input-padding;
+
+.qr-boxed-wrapper {
+  background: white;
+  border: solid 1px $light-detail-1-color;
+  width: 100%;
+  margin-bottom: rem(32);
+  padding: $boxed-top-bottom-padding $boxed-sides-padding;
+  min-height: $boxed-height;
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+
+  .qr-grid-item { align-self: center; }
+  &.no-padding { padding: 0; }
+
+  @each $color-name, $color-value in $colors{
+    &.#{$color-name} { border-color: $color-value; }
+  }
+}
+
+.qr-boxed-group,
+.qr-boxed-wrapper {
+  position: relative;
+
+  .left-content,
+  .right-content {
+    // min-height: $boxed-height;
+    height: 100%;
+    @include display(flex);
+    @include align-items(center);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+  }
+
+  .left-content { left: rem(-62); }
+  .right-content { right: rem(22);}
+}
+
+.qr-boxed-group {
+  margin-bottom: rem(32);
+
+  .qr-boxed-wrapper { margin-bottom: rem(0); }
+  .qr-boxed-wrapper:not(:last-of-type) { border-bottom: none; }
+
+  &.border-left {
+    border-left: 1px solid $detail-3-color;
+
+    .qr-boxed-wrapper {
+      border-left: none;
+    }
+  }
+}

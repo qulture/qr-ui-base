@@ -1,0 +1,21 @@
+.qr-bar-chart{
+  svg{
+    flex-shrink: 0;
+  }
+
+  .ct-vertical{
+    display: none;
+  }
+
+  .ct-horizontal{
+    stroke: transparentize($disabled-font-color, 0.8) !important;
+  }
+
+  & .ct-bar.good{ stroke: $good-color !important; }
+  & .ct-bar.normal{ stroke: $normal-color !important; }
+  & .ct-bar.bad{ stroke: $bad-color !important; }
+
+  @include medium-up() {
+    min-width: rem(500);
+  }
+}

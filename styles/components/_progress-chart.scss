@@ -1,0 +1,40 @@
+.qr-progress-chart{
+  position: relative;
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
+  .value{
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    @include position(absolute, 0 0 0 0);
+
+    div{
+      font-size: rem(24);
+      font-weight: 300;
+    }
+  }
+
+  // svg{
+  //   width: rem(71) !important;
+  //   height: rem(71) !important;
+  // }
+
+  // .ct-slice-donut{
+  //   stroke-width: 2px !important;
+  // }
+
+  .ct-series-b path{
+    stroke: transparentize($disabled-font-color, 0.8) !important;
+  }
+
+  &.good .ct-series-a path{ stroke: $good-color !important; }
+  &.normal .ct-series-a path{ stroke: $normal-color !important; }
+  &.bad .ct-series-a path{ stroke: $bad-color !important; }
+
+  &.good .value div{ color: $good-color; }
+  &.normal .value div{ color: $normal-color; }
+  &.bad .value div{ color: $bad-color; }
+  &.light .value div{ color: $content-bg-color; }
+}

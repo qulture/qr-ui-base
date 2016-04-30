@@ -1,0 +1,17 @@
+.qr-wizard-item {
+  display: inline-block;
+  border: solid 1px $light-detail-1-color;
+  height: rem(14);
+  width: rem(40);
+  margin-right: 2px;
+
+  &.completed {
+    border-color: $light-detail-1-color;
+    background: $light-detail-1-color;
+  }
+
+  &.current {
+    @include main-border-color;
+    @include main-background-color;
+  }
+}

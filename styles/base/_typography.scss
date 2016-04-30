@@ -1,0 +1,50 @@
+html,
+body,
+*,
+* *{
+  font-size: 12px;
+  font-family: $helvetica;
+  color: $detail-1-color;
+  font-weight: 300;
+
+  @media (min-width: $small-breakpoint) {
+    font-size: 14px;
+  }
+
+  @media (min-width: $x-large-breakpoint) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $xx-large-breakpoint) {
+    font-size: 18px;
+  }
+}
+
+#{$all-buttons},
+a {
+  @include appearance(none);
+  text-decoration: none;
+  @include main-color;
+  border: none;
+  background: none;
+}
+
+p {
+  line-height: rem(24);
+}
+
+h1 {
+  font-size: $xxl-font-size;
+}
+
+h2 {
+  font-size: $xl-font-size;
+}
+
+h3 {
+  font-size: $l-font-size;
+}
+
+h4 {
+  font-size: $m-font-size;
+}

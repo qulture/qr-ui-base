@@ -1,0 +1,46 @@
+$admin-color: #E29958;
+$employee-color: #01AE92;
+$white-color: #FFF;
+
+$detail-1-color: #3C3C3C;
+$detail-2-color: #666666;
+$detail-3-color: #9B9B9B;
+$detail-4-color: #BAB9AD;
+$light-detail-1-color: #E0E0D0;
+$light-detail-2-color: #F3F3ED;
+$light-detail-3-color: #F0F0F0;
+
+$alert-color: #C95B5A;
+$warn-color: #F6D082;
+$success-color: #02C9A9;
+$info-color: #58B5E2;
+
+$grading-good-color: #417505;
+$grading-normal-color: #F5A623;
+$grading-bad-color: #C90028;
+$grading-max-color: #106699;
+
+$colors: (
+  ('admin', $admin-color),
+  ('employee', $employee-color),
+  ('white', $white-color),
+
+  ('detail-1', $detail-1-color),
+  ('detail-2', $detail-2-color),
+  ('detail-3', $detail-3-color),
+  ('detail-4', $detail-4-color),
+  ('light-detail-1', $light-detail-1-color),
+  ('light-detail-2', $light-detail-2-color),
+  ('light-detail-3', $light-detail-3-color),
+
+  ('alert', $alert-color),
+  ('warn', $warn-color),
+  ('success', $success-color),
+  ('info', $info-color),
+
+  ('grading-good', $grading-good-color),
+  ('grading-normal', $grading-normal-color),
+  ('grading-bad', $grading-bad-color),
+  ('grading-max', $grading-max-color),
+  ('grading-out', $detail-4-color)
+);

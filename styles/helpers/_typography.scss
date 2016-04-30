@@ -1,0 +1,8 @@
+.selector {
+  font-size: rem(24);
+  @include main-color;
+}
+
+@each $size-name, $size in $font-sizes{
+  &.#{$size-name}-font-size { font-size: $size !important; }
+}

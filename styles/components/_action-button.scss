@@ -1,0 +1,60 @@
+.qr-action-button {
+  margin: rem(32);
+
+  .qr-secondary-actions a,
+  button span {
+    display: inline-block;
+    padding: $input-padding;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: rem(20);
+    color: white;
+  }
+
+  button {
+    background: $detail-1-color;
+    width: 100%;
+    span { font-family: $futura; }
+  }
+
+  .qr-secondary-actions a {
+    display: inline-block;
+    font-weight: 200;
+    border-left: solid 1px transparentize($detail-2-color, 0.3);;
+    &:hover { cursor: pointer; }
+  }
+
+  [class^="icon-"] {
+    display: none;
+  }
+
+  @media (min-width: $small-breakpoint) {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    background: $detail-1-color;
+    margin: rem(32) 0;
+    min-height: $boxed-height;
+
+    button {
+      @include flex(1);
+      @include display(flex);
+      @include align-items(center);
+      width: auto;
+      text-align: left;
+    }
+
+    button span {
+      @include align-self(center);
+      padding: 0;
+      padding-left: rem(32);
+    }
+
+    [class^="icon-"] {
+      display: inline-block;
+    }
+
+    .qr-secondary-actions a {
+      color: $light-detail-2-color;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.qr-dropdown {
+  position: relative;
+}
+
+.qr-dropdown-link [class^="icon-"] {
+  padding-left: rem(6);
+  font-size: inherit;
+}
+
+.qr-dropdown-options {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: rem(300);
+  background: $detail-1-color;
+}
+
+.qr-dropdown-option {
+  display: block;
+  border-bottom: solid 1px $detail-2-color;
+  color: $light-detail-3-color;
+  padding: rem(14);
+  font-size: $font-size;
+
+  &:hover:not(.main) {
+    background: $detail-2-color;
+  }
+
+  &.main {
+    color: $white-color;
+    border-color: $detail-3-color;
+  }
+}

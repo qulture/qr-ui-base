@@ -1,0 +1,20 @@
+.qr-tabs {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.qr-tab-item {
+  text-align: center;
+  border-bottom: 1px solid $light-detail-1-color;
+  color: $detail-3-color;
+  padding: rem(18);
+  font-size: $font-size;
+  min-width: rem(130);
+
+  &.active {
+    @include main-border-color;
+    @include main-color;
+  }
+}

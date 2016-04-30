@@ -1,0 +1,12 @@
+.qr-separator {
+  padding: rem(42) 0;
+
+  &.x-large { padding: rem(90) 0; }
+  &.large { padding: rem(60) 0; }
+  &.small { padding: rem(24) 0; }
+  &.x-small { padding: rem(12) 0; }
+}
+
+.qr-separator-line {
+  border-top: dashed 1px $light-detail-2-color;
+}

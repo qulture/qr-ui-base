@@ -1,0 +1,51 @@
+.qr-grid{
+  @include display(flex);
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: (-$gutter);
+
+  .qr-grid-item{
+    padding: $gutter;
+
+    &.medium-gutter{ padding: $medium-gutter; }
+    &.large-gutter{ padding: $large-gutter; }
+  }
+
+  &.justify-start { @include justify-content(flex-start) };
+  &.column-direction{ @include flex-direction(column); }
+  &.center-align{ @include align-items(center); }
+  &.full-height{ min-height: 100vh; }
+  &.no-wrap{ @include flex-wrap(noWrap); }
+
+  @for $i from 1 through 100 {
+    .s-#{$i} { @include flex-basis(percentage($i / 100)) }
+  }
+
+  @media only screen and (min-width: $small-breakpoint) {
+    @for $i from 1 through 100 {
+      .m-#{$i} { @include flex-basis(percentage($i / 100)) }
+    }
+  }
+
+  @media only screen and (min-width: $large-breakpoint) {
+    @for $i from 1 through 100 {
+      .l-#{$i} { @include flex-basis(percentage($i / 100)) }
+    }
+  }
+
+  @media only screen and (min-width: $x-large-breakpoint) {
+    @for $i from 1 through 100 {
+      .xl-#{$i} { @include flex-basis(percentage($i / 100)) }
+    }
+  }
+}
+
+@for $i from 1 through 10 {
+  .qr-grid-item.fg-#{$i},
+  .fg-#{$i} {
+    @include flex-grow($i);
+  }
+}

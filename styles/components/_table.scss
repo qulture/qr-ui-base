@@ -1,0 +1,70 @@
+table {
+  width: 100%;
+  text-align: left;
+
+  &.border-top {
+    border-top: solid 1px;
+    @include main-border-color;
+  }
+
+  tr {
+    border-bottom: solid 1px transparentize($light-detail-1-color, 0.5);
+  }
+
+  tr th,
+  tr td {
+    padding: $content-padding/1.5 $content-padding;
+  }
+
+
+  tr th span,
+  tr th {
+    font-family: $futura;
+    font-size: rem(14);
+    text-transform: uppercase;
+
+    &.large,
+    &.large span { font-size: rem(20); }
+  }
+
+  tr th span,
+  tr th [class^="icon-"] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  tr th [class^="icon-"] {
+    margin-left: rem(12);
+  }
+
+  @media (min-width: $small-breakpoint) {
+    &.no-columns-padding-sides {
+      tr th,
+      tr td {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &.no-columns-padding-left {
+      tr th,
+      tr td {
+        padding-left: 0;
+      }
+    }
+
+    &.no-columns-padding-right {
+      tr th,
+      tr td {
+        padding-right: 0;
+      }
+    }
+
+    &.small-padding {
+      tr td {
+        padding-top: $content-padding/2;
+        padding-bottom: $content-padding/2;
+      }
+    }
+  }
+}

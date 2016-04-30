@@ -1,0 +1,1106 @@
+@font-face {
+  font-family: 'font-icons';
+  src:    url('/packages/qr-base/public/fonts/font-icons.eot?j6f749');
+  src:    url('/packages/qr-base/public/fonts/font-icons.eot?j6f749#iefix') format('embedded-opentype'),
+          url('/packages/qr-base/public/fonts/font-icons.ttf?j6f749') format('truetype'),
+          url('/packages/qr-base/public/fonts/font-icons.woff?j6f749') format('woff'),
+          url('/packages/qr-base/public/fonts/font-icons.svg?j6f749#font-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'font-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: rem(16);
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // Sizes
+  &.x-small { font-size: rem(12); }
+  &.small { font-size: rem(18); }
+  &.medium { font-size: rem(28); }
+  &.large { font-size: rem(40); }
+  &.x-large { font-size: rem(50); }
+  &.xx-large { font-size: rem(60); }
+
+  // Colors
+  &.main-color { @include main-color; }
+  @each $color-name, $color-value in $colors{
+    &.#{$color-name}-color { color: $color-value; }
+  }
+}
+
+.icon-caret-up {
+    &:before {
+        content: $icon-caret-up;
+    }
+}
+.icon-caret-right {
+    &:before {
+        content: $icon-caret-right;
+    }
+}
+.icon-caret-left {
+    &:before {
+        content: $icon-caret-left;
+    }
+}
+.icon-caret-down {
+    &:before {
+        content: $icon-caret-down;
+    }
+}
+.icon-dots {
+    &:before {
+        content: $icon-dots;
+    }
+}
+.icon-thunder-aa {
+    &:before {
+        content: $icon-thunder-aa;
+    }
+}
+.icon-bars {
+    &:before {
+        content: $icon-bars;
+    }
+}
+.icon-vertical-dots {
+    &:before {
+        content: $icon-vertical-dots;
+    }
+}
+.icon-angle-left {
+    &:before {
+        content: $icon-angle-left;
+    }
+}
+.icon-angle-right {
+    &:before {
+        content: $icon-angle-right;
+    }
+}
+.icon-plus-circle {
+    &:before {
+        content: $icon-plus-circle;
+    }
+}
+.icon-aim {
+    &:before {
+        content: $icon-aim;
+    }
+}
+.icon-airplane {
+    &:before {
+        content: $icon-airplane;
+    }
+}
+.icon-alarm {
+    &:before {
+        content: $icon-alarm;
+    }
+}
+.icon-antenna {
+    &:before {
+        content: $icon-antenna;
+    }
+}
+.icon-archive {
+    &:before {
+        content: $icon-archive;
+    }
+}
+.icon-bar-chart {
+    &:before {
+        content: $icon-bar-chart;
+    }
+}
+.icon-basket {
+    &:before {
+        content: $icon-basket;
+    }
+}
+.icon-battery {
+    &:before {
+        content: $icon-battery;
+    }
+}
+.icon-bell {
+    &:before {
+        content: $icon-bell;
+    }
+}
+.icon-bike {
+    &:before {
+        content: $icon-bike;
+    }
+}
+.icon-board-complex-chart {
+    &:before {
+        content: $icon-board-complex-chart;
+    }
+}
+.icon-board-line-chart {
+    &:before {
+        content: $icon-board-line-chart;
+    }
+}
+.icon-bookmark {
+    &:before {
+        content: $icon-bookmark;
+    }
+}
+.icon-boxes {
+    &:before {
+        content: $icon-boxes;
+    }
+}
+.icon-briefcase {
+    &:before {
+        content: $icon-briefcase;
+    }
+}
+.icon-calendar-flip {
+    &:before {
+        content: $icon-calendar-flip;
+    }
+}
+.icon-calendar {
+    &:before {
+        content: $icon-calendar;
+    }
+}
+.icon-camera {
+    &:before {
+        content: $icon-camera;
+    }
+}
+.icon-car {
+    &:before {
+        content: $icon-car;
+    }
+}
+.icon-cart-a {
+    &:before {
+        content: $icon-cart-a;
+    }
+}
+.icon-cart {
+    &:before {
+        content: $icon-cart;
+    }
+}
+.icon-celsius {
+    &:before {
+        content: $icon-celsius;
+    }
+}
+.icon-check {
+    &:before {
+        content: $icon-check;
+    }
+}
+.icon-chicken-wind {
+    &:before {
+        content: $icon-chicken-wind;
+    }
+}
+.icon-clip {
+    &:before {
+        content: $icon-clip;
+    }
+}
+.icon-clock {
+    &:before {
+        content: $icon-clock;
+    }
+}
+.icon-close {
+    &:before {
+        content: $icon-close;
+    }
+}
+.icon-cloud-check {
+    &:before {
+        content: $icon-cloud-check;
+    }
+}
+.icon-cloud-download {
+    &:before {
+        content: $icon-cloud-download;
+    }
+}
+.icon-cloud-rainbow {
+    &:before {
+        content: $icon-cloud-rainbow;
+    }
+}
+.icon-cloud-reload {
+    &:before {
+        content: $icon-cloud-reload;
+    }
+}
+.icon-cloud-repeat {
+    &:before {
+        content: $icon-cloud-repeat;
+    }
+}
+.icon-cloud-snow-rain {
+    &:before {
+        content: $icon-cloud-snow-rain;
+    }
+}
+.icon-cloud-snow {
+    &:before {
+        content: $icon-cloud-snow;
+    }
+}
+.icon-cloud-sun {
+    &:before {
+        content: $icon-cloud-sun;
+    }
+}
+.icon-cloud-thunder {
+    &:before {
+        content: $icon-cloud-thunder;
+    }
+}
+.icon-cloud-upload {
+    &:before {
+        content: $icon-cloud-upload;
+    }
+}
+.icon-cloud-wind {
+    &:before {
+        content: $icon-cloud-wind;
+    }
+}
+.icon-cloud {
+    &:before {
+        content: $icon-cloud;
+    }
+}
+.icon-clouds-sun {
+    &:before {
+        content: $icon-clouds-sun;
+    }
+}
+.icon-clouds {
+    &:before {
+        content: $icon-clouds;
+    }
+}
+.icon-clound-sun-rain {
+    &:before {
+        content: $icon-clound-sun-rain;
+    }
+}
+.icon-coffee {
+    &:before {
+        content: $icon-coffee;
+    }
+}
+.icon-cog {
+    &:before {
+        content: $icon-cog;
+    }
+}
+.icon-cogs {
+    &:before {
+        content: $icon-cogs;
+    }
+}
+.icon-comment-dots {
+    &:before {
+        content: $icon-comment-dots;
+    }
+}
+.icon-comment-square-dots-a {
+    &:before {
+        content: $icon-comment-square-dots-a;
+    }
+}
+.icon-comment-square-dots {
+    &:before {
+        content: $icon-comment-square-dots;
+    }
+}
+.icon-comment-square {
+    &:before {
+        content: $icon-comment-square;
+    }
+}
+.icon-comment {
+    &:before {
+        content: $icon-comment;
+    }
+}
+.icon-comments-square-dots {
+    &:before {
+        content: $icon-comments-square-dots;
+    }
+}
+.icon-comments {
+    &:before {
+        content: $icon-comments;
+    }
+}
+.icon-compass {
+    &:before {
+        content: $icon-compass;
+    }
+}
+.icon-complex-chart-down {
+    &:before {
+        content: $icon-complex-chart-down;
+    }
+}
+.icon-complex-chart-up {
+    &:before {
+        content: $icon-complex-chart-up;
+    }
+}
+.icon-control-squares {
+    &:before {
+        content: $icon-control-squares;
+    }
+}
+.icon-control {
+    &:before {
+        content: $icon-control;
+    }
+}
+.icon-copy {
+    &:before {
+        content: $icon-copy;
+    }
+}
+.icon-cross-arrows {
+    &:before {
+        content: $icon-cross-arrows;
+    }
+}
+.icon-db {
+    &:before {
+        content: $icon-db;
+    }
+}
+.icon-desktop {
+    &:before {
+        content: $icon-desktop;
+    }
+}
+.icon-duplicate-down {
+    &:before {
+        content: $icon-duplicate-down;
+    }
+}
+.icon-duplicate-up {
+    &:before {
+        content: $icon-duplicate-up;
+    }
+}
+.icon-eject {
+    &:before {
+        content: $icon-eject;
+    }
+}
+.icon-envelop-empty {
+    &:before {
+        content: $icon-envelop-empty;
+    }
+}
+.icon-envelope-down {
+    &:before {
+        content: $icon-envelope-down;
+    }
+}
+.icon-envelope-open {
+    &:before {
+        content: $icon-envelope-open;
+    }
+}
+.icon-envelope-plus {
+    &:before {
+        content: $icon-envelope-plus;
+    }
+}
+.icon-envelope {
+    &:before {
+        content: $icon-envelope;
+    }
+}
+.icon-eye {
+    &:before {
+        content: $icon-eye;
+    }
+}
+.icon-fahrenheit {
+    &:before {
+        content: $icon-fahrenheit;
+    }
+}
+.icon-file-down {
+    &:before {
+        content: $icon-file-down;
+    }
+}
+.icon-file-lines-pencil {
+    &:before {
+        content: $icon-file-lines-pencil;
+    }
+}
+.icon-file-lines {
+    &:before {
+        content: $icon-file-lines;
+    }
+}
+.icon-file-minus {
+    &:before {
+        content: $icon-file-minus;
+    }
+}
+.icon-file-plus {
+    &:before {
+        content: $icon-file-plus;
+    }
+}
+.icon-file-up {
+    &:before {
+        content: $icon-file-up;
+    }
+}
+.icon-file {
+    &:before {
+        content: $icon-file;
+    }
+}
+.icon-files {
+    &:before {
+        content: $icon-files;
+    }
+}
+.icon-film {
+    &:before {
+        content: $icon-film;
+    }
+}
+.icon-flag-wind {
+    &:before {
+        content: $icon-flag-wind;
+    }
+}
+.icon-flag {
+    &:before {
+        content: $icon-flag;
+    }
+}
+.icon-folder-open {
+    &:before {
+        content: $icon-folder-open;
+    }
+}
+.icon-folder {
+    &:before {
+        content: $icon-folder;
+    }
+}
+.icon-fork-knife {
+    &:before {
+        content: $icon-fork-knife;
+    }
+}
+.icon-gift-a {
+    &:before {
+        content: $icon-gift-a;
+    }
+}
+.icon-gift {
+    &:before {
+        content: $icon-gift;
+    }
+}
+.icon-globe {
+    &:before {
+        content: $icon-globe;
+    }
+}
+.icon-group {
+    &:before {
+        content: $icon-group;
+    }
+}
+.icon-headphones {
+    &:before {
+        content: $icon-headphones;
+    }
+}
+.icon-heart {
+    &:before {
+        content: $icon-heart;
+    }
+}
+.icon-hierarchy-round {
+    &:before {
+        content: $icon-hierarchy-round;
+    }
+}
+.icon-hierarchy-simple {
+    &:before {
+        content: $icon-hierarchy-simple;
+    }
+}
+.icon-hierarchy {
+    &:before {
+        content: $icon-hierarchy;
+    }
+}
+.icon-house {
+    &:before {
+        content: $icon-house;
+    }
+}
+.icon-hurricane {
+    &:before {
+        content: $icon-hurricane;
+    }
+}
+.icon-id {
+    &:before {
+        content: $icon-id;
+    }
+}
+.icon-in {
+    &:before {
+        content: $icon-in;
+    }
+}
+.icon-inbox-in {
+    &:before {
+        content: $icon-inbox-in;
+    }
+}
+.icon-inbox-out {
+    &:before {
+        content: $icon-inbox-out;
+    }
+}
+.icon-info {
+    &:before {
+        content: $icon-info;
+    }
+}
+.icon-key {
+    &:before {
+        content: $icon-key;
+    }
+}
+.icon-lamp {
+    &:before {
+        content: $icon-lamp;
+    }
+}
+.icon-line-chart-up {
+    &:before {
+        content: $icon-line-chart-up;
+    }
+}
+.icon-line-chart {
+    &:before {
+        content: $icon-line-chart;
+    }
+}
+.icon-link {
+    &:before {
+        content: $icon-link;
+    }
+}
+.icon-lock {
+    &:before {
+        content: $icon-lock;
+    }
+}
+.icon-map-mark-a {
+    &:before {
+        content: $icon-map-mark-a;
+    }
+}
+.icon-map-marker {
+    &:before {
+        content: $icon-map-marker;
+    }
+}
+.icon-map-with-marker {
+    &:before {
+        content: $icon-map-with-marker;
+    }
+}
+.icon-map {
+    &:before {
+        content: $icon-map;
+    }
+}
+.icon-maximize-a {
+    &:before {
+        content: $icon-maximize-a;
+    }
+}
+.icon-maximize {
+    &:before {
+        content: $icon-maximize;
+    }
+}
+.icon-megaphone-pro {
+    &:before {
+        content: $icon-megaphone-pro;
+    }
+}
+.icon-megaphone {
+    &:before {
+        content: $icon-megaphone;
+    }
+}
+.icon-mic {
+    &:before {
+        content: $icon-mic;
+    }
+}
+.icon-minimize-a {
+    &:before {
+        content: $icon-minimize-a;
+    }
+}
+.icon-minimize {
+    &:before {
+        content: $icon-minimize;
+    }
+}
+.icon-minus {
+    &:before {
+        content: $icon-minus;
+    }
+}
+.icon-mobile {
+    &:before {
+        content: $icon-mobile;
+    }
+}
+.icon-moon {
+    &:before {
+        content: $icon-moon;
+    }
+}
+.icon-moustache {
+    &:before {
+        content: $icon-moustache;
+    }
+}
+.icon-music {
+    &:before {
+        content: $icon-music;
+    }
+}
+.icon-news {
+    &:before {
+        content: $icon-news;
+    }
+}
+.icon-next {
+    &:before {
+        content: $icon-next;
+    }
+}
+.icon-notebook {
+    &:before {
+        content: $icon-notebook;
+    }
+}
+.icon-open-box {
+    &:before {
+        content: $icon-open-box;
+    }
+}
+.icon-out {
+    &:before {
+        content: $icon-out;
+    }
+}
+.icon-paint-brush {
+    &:before {
+        content: $icon-paint-brush;
+    }
+}
+.icon-paper-plane {
+    &:before {
+        content: $icon-paper-plane;
+    }
+}
+.icon-pause {
+    &:before {
+        content: $icon-pause;
+    }
+}
+.icon-pen {
+    &:before {
+        content: $icon-pen;
+    }
+}
+.icon-person-comment {
+    &:before {
+        content: $icon-person-comment;
+    }
+}
+.icon-person-thought {
+    &:before {
+        content: $icon-person-thought;
+    }
+}
+.icon-person {
+    &:before {
+        content: $icon-person;
+    }
+}
+.icon-phone-ring {
+    &:before {
+        content: $icon-phone-ring;
+    }
+}
+.icon-picture {
+    &:before {
+        content: $icon-picture;
+    }
+}
+.icon-pictures {
+    &:before {
+        content: $icon-pictures;
+    }
+}
+.icon-pie-chart-a {
+    &:before {
+        content: $icon-pie-chart-a;
+    }
+}
+.icon-pie-chart {
+    &:before {
+        content: $icon-pie-chart;
+    }
+}
+.icon-pin-a {
+    &:before {
+        content: $icon-pin-a;
+    }
+}
+.icon-pin {
+    &:before {
+        content: $icon-pin;
+    }
+}
+.icon-play {
+    &:before {
+        content: $icon-play;
+    }
+}
+.icon-plus {
+    &:before {
+        content: $icon-plus;
+    }
+}
+.icon-previous {
+    &:before {
+        content: $icon-previous;
+    }
+}
+.icon-printer {
+    &:before {
+        content: $icon-printer;
+    }
+}
+.icon-pro-mic {
+    &:before {
+        content: $icon-pro-mic;
+    }
+}
+.icon-radio {
+    &:before {
+        content: $icon-radio;
+    }
+}
+.icon-rain {
+    &:before {
+        content: $icon-rain;
+    }
+}
+.icon-record {
+    &:before {
+        content: $icon-record;
+    }
+}
+.icon-repeat {
+    &:before {
+        content: $icon-repeat;
+    }
+}
+.icon-return {
+    &:before {
+        content: $icon-return;
+    }
+}
+.icon-roll {
+    &:before {
+        content: $icon-roll;
+    }
+}
+.icon-satellite {
+    &:before {
+        content: $icon-satellite;
+    }
+}
+.icon-science {
+    &:before {
+        content: $icon-science;
+    }
+}
+.icon-scissor {
+    &:before {
+        content: $icon-scissor;
+    }
+}
+.icon-search-minus {
+    &:before {
+        content: $icon-search-minus;
+    }
+}
+.icon-search-plus {
+    &:before {
+        content: $icon-search-plus;
+    }
+}
+.icon-share {
+    &:before {
+        content: $icon-share;
+    }
+}
+.icon-shopping-bag-a {
+    &:before {
+        content: $icon-shopping-bag-a;
+    }
+}
+.icon-shopping-bag {
+    &:before {
+        content: $icon-shopping-bag;
+    }
+}
+.icon-shuffle {
+    &:before {
+        content: $icon-shuffle;
+    }
+}
+.icon-signal {
+    &:before {
+        content: $icon-signal;
+    }
+}
+.icon-small-group-comment {
+    &:before {
+        content: $icon-small-group-comment;
+    }
+}
+.icon-small-group-eye {
+    &:before {
+        content: $icon-small-group-eye;
+    }
+}
+.icon-small-group {
+    &:before {
+        content: $icon-small-group;
+    }
+}
+.icon-sound-mute {
+    &:before {
+        content: $icon-sound-mute;
+    }
+}
+.icon-sound-volume {
+    &:before {
+        content: $icon-sound-volume;
+    }
+}
+.icon-sound {
+    &:before {
+        content: $icon-sound;
+    }
+}
+.icon-spot {
+    &:before {
+        content: $icon-spot;
+    }
+}
+.icon-square-in-down {
+    &:before {
+        content: $icon-square-in-down;
+    }
+}
+.icon-square-in-up {
+    &:before {
+        content: $icon-square-in-up;
+    }
+}
+.icon-square-out-right {
+    &:before {
+        content: $icon-square-out-right;
+    }
+}
+.icon-square-out-up {
+    &:before {
+        content: $icon-square-out-up;
+    }
+}
+.icon-square-pencil {
+    &:before {
+        content: $icon-square-pencil;
+    }
+}
+.icon-star {
+    &:before {
+        content: $icon-star;
+    }
+}
+.icon-stop {
+    &:before {
+        content: $icon-stop;
+    }
+}
+.icon-store {
+    &:before {
+        content: $icon-store;
+    }
+}
+.icon-sun {
+    &:before {
+        content: $icon-sun;
+    }
+}
+.icon-tag {
+    &:before {
+        content: $icon-tag;
+    }
+}
+.icon-temperature {
+    &:before {
+        content: $icon-temperature;
+    }
+}
+.icon-think {
+    &:before {
+        content: $icon-think;
+    }
+}
+.icon-thumbs-up {
+    &:before {
+        content: $icon-thumbs-up;
+    }
+}
+.icon-thunder-a {
+    &:before {
+        content: $icon-thunder-a;
+    }
+}
+.icon-thunder {
+    &:before {
+        content: $icon-thunder;
+    }
+}
+.icon-timer {
+    &:before {
+        content: $icon-timer;
+    }
+}
+.icon-tools {
+    &:before {
+        content: $icon-tools;
+    }
+}
+.icon-train {
+    &:before {
+        content: $icon-train;
+    }
+}
+.icon-trash {
+    &:before {
+        content: $icon-trash;
+    }
+}
+.icon-trophy {
+    &:before {
+        content: $icon-trophy;
+    }
+}
+.icon-turn-on {
+    &:before {
+        content: $icon-turn-on;
+    }
+}
+.icon-umbrella-rain {
+    &:before {
+        content: $icon-umbrella-rain;
+    }
+}
+.icon-umbrella-wind-a {
+    &:before {
+        content: $icon-umbrella-wind-a;
+    }
+}
+.icon-umbrella-wind {
+    &:before {
+        content: $icon-umbrella-wind;
+    }
+}
+.icon-umbrella {
+    &:before {
+        content: $icon-umbrella;
+    }
+}
+.icon-unlock {
+    &:before {
+        content: $icon-unlock;
+    }
+}
+.icon-video-camera {
+    &:before {
+        content: $icon-video-camera;
+    }
+}
+.icon-weight {
+    &:before {
+        content: $icon-weight;
+    }
+}
+.icon-wind-a {
+    &:before {
+        content: $icon-wind-a;
+    }
+}
+.icon-wind-rain {
+    &:before {
+        content: $icon-wind-rain;
+    }
+}
+.icon-wind {
+    &:before {
+        content: $icon-wind;
+    }
+}
+.icon-wine {
+    &:before {
+        content: $icon-wine;
+    }
+}

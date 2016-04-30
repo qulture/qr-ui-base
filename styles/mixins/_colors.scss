@@ -1,0 +1,26 @@
+@mixin main-background-color() {
+  background: $admin-color;
+
+  &.employee-user,
+  .employee-user &{
+    background: $employee-color;
+  }
+}
+
+@mixin main-border-color() {
+  border-color: $admin-color;
+
+  &.employee-user,
+  .employee-user &{
+    border-color: $employee-color;
+  }
+}
+
+@mixin main-color() {
+  color: $admin-color;
+
+  &.employee-user,
+  .employee-user &{
+    color: $employee-color;
+  }
+}

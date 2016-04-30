@@ -1,0 +1,25 @@
+.qr-icon-link {
+  span,
+  [class^="icon-"] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    font-size: rem(20);
+    @include main-color;
+  }
+
+  &.main-color span { @include main-color; }
+  @each $color-name, $color-value in $colors{
+    &.#{$color-name}-color span { color: $color-value; }
+  }
+
+  [class^="icon-"] {
+    margin-right: rem(12);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

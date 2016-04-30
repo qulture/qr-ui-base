@@ -1,0 +1,18 @@
+.qr-badge{
+  position: relative;
+
+  .qr-badge-content{
+    position: absolute;
+    right: rem(-10);
+    bottom: rem(-10);
+    font-weight: 200;
+    font-size: rem(14);
+    color: $content-bg-color;
+    letter-spacing: 1.39px;
+    background: $main-color;
+    min-height: rem(33);
+    border-radius: rem(33);
+    padding: rem(6);
+    padding-top: rem(9);
+  }
+}

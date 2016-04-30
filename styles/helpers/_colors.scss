@@ -1,0 +1,15 @@
+@each $color-name, $color-value in $colors{
+  .#{$color-name}-color { color: $color-value !important; }
+}
+
+@each $color-name, $color-value in $colors{
+  .#{$color-name}-bg-color { background-color: $color-value !important; }
+}
+
+@each $color-name, $color-value in $colors{
+  .#{$color-name}-border-color { background-color: $color-value !important; }
+}
+
+.main-color { @include main-color; }
+.main-bg-color { @include main-background-color; }
+.main-border-color { @include main-border-color; }

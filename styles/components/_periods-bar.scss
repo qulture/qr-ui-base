@@ -1,0 +1,36 @@
+.qr-periods-bar {
+  @include display(flex);
+  margin: rem(22) 0 rem(52) 0;
+}
+
+.qr-period-item {
+  display: block;
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+  text-align: center;
+  margin: auto;
+  min-height: rem(105);
+  width: 14.285714286%;
+  border-bottom: solid 1px;
+  border-color: $light-detail-1-color;
+  font-size: $font-size;
+  color: $detail-1-color;
+  padding: rem(12);
+
+
+  &.active {
+    font-size: $m-font-size;
+    border: solid 1px;
+    border-color: $light-detail-1-color;
+    border-bottom: none;
+  }
+
+  &.inactive {
+    color: lighten($detail-4-color, 20%);
+  }
+
+  &:not(.inactive):hover {
+    cursor: pointer;
+  }
+}

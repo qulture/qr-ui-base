@@ -1,0 +1,55 @@
+.qr-avatar-wrapper{
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(flex-start);
+
+  .qr-avatar{
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    background: $light-detail-1-color;
+    border-radius: 50%;
+    @include size(rem(60));
+
+    img,
+    .qr-initials{
+      color: white;
+    }
+
+    .qr-initials{
+      font-weight: 300;
+      font-size: rem(24);
+    }
+
+    &.small {
+      @include size(rem(40));
+      .qr-initials{ font-size: rem(16); }
+    }
+  }
+
+  .qr-avatar-text{
+    margin-left: rem(20);
+
+    h4,
+    p{
+      margin: 0;
+    }
+
+    h4{
+      font-size: $l-font-size;
+      @include main-color;
+    }
+
+    p{
+      color: $detail-3-color;
+      font-size: $s-font-size;
+      line-height: 1.2;
+      font-weight: 200;
+    }
+
+    &.small {
+      margin-left: rem(14);
+      h4 { font-size: $m-font-size; }
+    }
+  }
+}

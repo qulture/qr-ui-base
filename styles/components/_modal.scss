@@ -1,0 +1,65 @@
+.qr-modal-wrapper {
+  z-index: 130;
+  @include size(100%);
+  @include position(fixed, 0 0 0 0);
+  background: transparentize(white, 0.2);
+  overflow: scroll;
+}
+
+.qr-modal {
+  border: solid 1px $light-detail-1-color;
+  margin: rem(120) auto;
+  background: white;
+  width: 95%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.qr-modal-header,
+.qr-modal-content {
+  padding: rem(32) $content-padding;
+}
+
+.qr-modal-header {
+  text-align: left;
+  padding-right: 2 * $content-padding;
+
+  h2 {
+    margin: rem(4) 0;
+  }
+  span {
+    color: $detail-2-color;
+  }
+}
+
+.qr-modal-footer {
+  border-top: solid 1px $light-detail-1-color;
+
+  button,
+  a {
+    display: block;
+    font-size: rem(20);
+    padding: rem(17) $content-padding;
+  }
+}
+
+.qr-close-modal-link {
+  position: absolute;
+  top: $content-padding / 3;
+  right: 0;
+}
+
+@media (min-width: $small-breakpoint) {
+  .qr-modal {
+    width: 75%;
+    left: auto;
+  }
+
+  .qr-close-modal-link {
+    position: absolute;
+    top: $content-padding;
+    right: $content-padding;
+  }
+}
