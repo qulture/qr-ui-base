@@ -4,7 +4,24 @@
   &.transparent { background: transparentize(#000000, 0.84); }
 }
 
-.qr-panel-footer {
+.qr-panel-header,
+.qr-panel-footer,
+.qr-panel-content {
   padding: rem(17) $panel-padding;
+}
+
+.qr-panel-footer {
   border-top: 1px solid $light-detail-1-color;
+  color: $detail-3-color;
+}
+
+.qr-panel-header {
+  padding-bottom: 0;
+
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    font-weight: 400;
+  }
 }
