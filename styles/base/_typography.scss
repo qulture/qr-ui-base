@@ -33,18 +33,22 @@ p {
   line-height: rem(24);
 }
 
-h1 {
+h1,
+h1 * {
   font-size: $xxl-font-size;
 }
 
-h2 {
+h2,
+h2 * {
   font-size: $xl-font-size;
 }
 
-h3 {
+h3,
+h3 * {
   font-size: $l-font-size;
 }
 
-h4 {
+h4,
+h4 * {
   font-size: $m-font-size;
 }
