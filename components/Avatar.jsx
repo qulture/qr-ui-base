@@ -10,15 +10,17 @@ class Avatar extends Component {
   }
 
   renderAvatarText() {
-    const { user, size, subtitle, hideName } = this.props;
+    const { user, size, subtitle, hideName, color } = this.props;
     if(!user || !!hideName) return '';
     const name = NameFormatter.getFirstAndLastName(user.profile.name);
-    const textClassName = `qr-avatar-text ${size}`;
+    const textWrapperClassName = `qr-avatar-text ${size}`;
+    const nameClassName = `${color}-color`;
+    const sibtitleClassName = `${color}-color`;
 
     const avatarTextDOMItem = (
-      <div className={textClassName}>
-        <h4>{name}</h4>
-        <p>{subtitle}</p>
+      <div className={textWrapperClassName}>
+        <h4 className={nameClassName}>{name}</h4>
+        <p className={sibtitleClassName}>{subtitle}</p>
       </div>
     );
 
@@ -60,6 +62,7 @@ class Avatar extends Component {
 Avatar.propTypes = {
   user: PropTypes.object,
   size: PropTypes.string,
+  color: PropTypes.string,
   subtitle: PropTypes.string,
   hideName: PropTypes.bool,
   badgeText: PropTypes.node
