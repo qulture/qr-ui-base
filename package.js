@@ -1,12 +1,8 @@
 Package.describe({
-  name: 'qr-base',
+  name: 'qulture:qr-ui-base',
   version: '0.0.1',
-  // Brief, one-line summary of the package.
-  summary: 'Qulture.Rocks base components and styles',
-  // URL to the Git repository containing the source code for this package.
-  git: '',
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
+  summary: 'QR base react components and styles',
+  git: 'https://github.com/qulture/qr-ui-base',
   documentation: 'README.md'
 });
 
