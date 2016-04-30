@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import { IconLink } from 'meteor/qr-base/components';
+import IconLink from './../IconLink';
 import ModalFooter from './ModalFooter';
 
 class Modal extends Component {
