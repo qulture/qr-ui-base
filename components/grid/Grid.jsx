@@ -6,6 +6,7 @@ function Grid(props) {
   let className = `qr-grid ${direction}-direction ${align}-align justify-${justify}`;
   if(!!fullHeight) className += ' full-height';
   if(!!noWrap) className += ' no-wrap';
+  if(!!noWrap) className += ' boxed';
 
   return (
     <div className={className}>
@@ -20,6 +21,7 @@ Grid.propTypes = {
   justify: PropTypes.string,
   fullHeight: PropTypes.bool,
   noWrap: PropTypes.bool,
+  boxed: PropTypes.bool,
 };
 
 export default Grid
