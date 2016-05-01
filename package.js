@@ -11,9 +11,9 @@ Package.onUse(function(api) {
   api.export('QRComponents');
 
   api.use('ecmascript');
-  api.use('fourseven:scss');
-  api.use('wolves:bourbon');
-  api.use('react-form-helpers');
+  api.use('fourseven:scss@3.4.3');
+  api.use('wolves:bourbon@3.1.0');
+  api.use('cinn:react-form-helpers@0.0.1');
 
   api.addAssets([
     'public/fonts/font-icons.eot',
