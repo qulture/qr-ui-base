@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { focusInputByRef } from 'meteor/cinn:react-form-helpers';
 import TextareaAutosize from 'react-textarea-autosize';
-import ReactMarkdown from 'react-markdown';
 import { Boxed } from './../boxed';
 import Icon from './../Icon';
+import Markdown from './../Markdown';
 import InputLabel from './InputLabel';
 
 
@@ -27,7 +27,7 @@ class InputMarkdown extends Component {
     const ref = !!focus ? 'focus' : '';
     const inputProps = { ref, value, placeholder, onChange };
     const toggleViewIcon = previewing ? 'square-pencil' : 'eye';
-    const contentDOMItem = previewing ? <ReactMarkdown className="qr-markdown-preview" source={value} /> : <TextareaAutosize minRows={5} {...inputProps} />;
+    const contentDOMItem = previewing ? <Markdown value={value} /> : <TextareaAutosize minRows={5} {...inputProps} />;
 
     return (
       <div className="qr-input-markdown">

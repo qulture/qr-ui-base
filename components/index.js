@@ -4,6 +4,7 @@ import Growl from './Growl';
 import Icon from './Icon';
 import IconLink from './IconLink';
 import Loading from './Loading';
+import Markdown from './Markdown';
 import PeriodsBar from './PeriodsBar';
 import Separator from './Separator';
 import Toggle from './Toggle';
@@ -15,6 +16,7 @@ export {
   Icon,
   IconLink,
   Loading,
+  Markdown,
   PeriodsBar,
   Separator,
   Toggle
