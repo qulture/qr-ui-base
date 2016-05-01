@@ -5,6 +5,7 @@ $toggle-ball-size: rem(18);
 .qr-toggle-wrapper {
   @include display(flex);
   @include align-items(center);
+  &:hover { cursor: pointer; }
 }
 
 .qr-toggle-label-left {
