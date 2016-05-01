@@ -10,6 +10,11 @@
   min-height: rem(60);
 }
 
+textarea {
+  padding: $input-padding;
+  resize: none;
+}
+
 @media (min-width: $small-breakpoint) {
   #{$all-text-inputs} {
     text-align: left;
