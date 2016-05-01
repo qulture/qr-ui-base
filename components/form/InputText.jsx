@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Boxed } from './../boxed';
-import { focusInputByRef } from 'meteor/react-form-helpers';
+import { focusInputByRef } from 'meteor/cinn:react-form-helpers';
 import InputLabel from './InputLabel';
 
 class InputText extends Component {
