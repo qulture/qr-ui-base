@@ -56,7 +56,6 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-  modalKey: PropTypes.string,
   open: PropTypes.bool,
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
