@@ -7,6 +7,12 @@
 .text-left { text-align: left !important; }
 .text-center { text-align: center !important; }
 
+.thin-weight { font-weight: 100 !important; }
+.light-weight { font-weight: 200 !important; }
+.normal-weight { font-weight: 500 !important; }
+.medium-weight { font-weight: 500 !important; }
+.bold-weight { font-weight: 600 !important; }
+
 @each $size-name, $size in $font-sizes{
   &.#{$size-name}-font-size { font-size: $size !important; }
 }
