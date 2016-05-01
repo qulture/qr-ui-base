@@ -1,0 +1,39 @@
+.qr-input-markdown {
+  .qr-boxed-wrapper {
+    padding: 0;
+  }
+
+  .qr-markdown-preview,
+  textarea {
+    padding: 0 $input-padding;
+  }
+}
+
+.qr-input-markdown-options,
+.qr-input-markdown-message {
+  padding: rem(8) $input-padding / 2;
+  width: 100%;
+  text-align: right;
+  color: $detail-4-color;
+}
+
+.qr-input-markdown-message {
+
+  &,
+  a {
+    margin: 0;
+    font-weight: 200;
+    font-size: $xs-font-size;
+  }
+}
+
+.qr-markdown-preview {
+  h1:first-child,
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child,
+  p:first-child {
+    margin-top: 0;
+  }
+}

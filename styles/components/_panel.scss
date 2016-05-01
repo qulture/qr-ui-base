@@ -4,6 +4,17 @@ $transparent-panel-link-border-color: transparentize($light-detail-1-color, 0.8)
 .qr-panel {
   background: white;
   margin-bottom: 2 * $gutter;
+
+  &.with-side-content {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+
+    .qr-side-content {
+      width: 30%;
+    }
+  }
 }
 
 .qr-panel-content {

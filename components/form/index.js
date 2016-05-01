@@ -4,6 +4,7 @@ import InputsGroup from './InputsGroup';
 import InputCheckbox from './InputCheckbox';
 import InputLabel from './InputLabel';
 import InputGrading from './InputGrading';
+import InputMarkdown from './InputMarkdown';
 
 export {
   InputText,
@@ -11,5 +12,6 @@ export {
   InputCheckbox,
   InputsGroup,
   InputLabel,
-  InputGrading
+  InputGrading,
+  InputMarkdown
 }
