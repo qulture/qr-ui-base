@@ -1,0 +1,34 @@
+$toggle-height: rem(22);
+$toggle-width: rem(60);
+$toggle-ball-size: rem(18);
+
+.qr-toggle-wrapper {
+  @include display(flex);
+  @include align-items(center);
+}
+
+.qr-toggle-label-left {
+  margin-right: rem(15);
+}
+
+.qr-toggle-label-right {
+  margin-left: rem(15);
+}
+
+.qr-toggle {
+  @include display(flex);
+  @include align-items(center);
+  background: $detail-4-color;
+  border-radius: $toggle-height;
+  width: $toggle-width;
+  height: $toggle-height;
+  &.active { @include justify-content(flex-end) };
+}
+
+.qr-toggle-ball {
+  background: $white-color;
+  border-radius: 50%;
+  margin: 0 rem(2);
+  @include size($toggle-ball-size);
+
+}

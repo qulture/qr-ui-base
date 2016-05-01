@@ -6,6 +6,7 @@ import IconLink from './IconLink';
 import Loading from './Loading';
 import PeriodsBar from './PeriodsBar';
 import Separator from './Separator';
+import Toggle from './Toggle';
 
 export {
   Avatar,
@@ -15,5 +16,6 @@ export {
   IconLink,
   Loading,
   PeriodsBar,
-  Separator
+  Separator,
+  Toggle
 }
