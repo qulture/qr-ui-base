@@ -8,19 +8,20 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: rem(20);
-    color: white;
   }
 
   button {
     background: $detail-1-color;
     width: 100%;
-    span { font-family: $futura; }
+    span {
+      font-family: $futura;
+      color: white;
+    }
   }
 
   .qr-secondary-actions a {
     display: inline-block;
     font-weight: 200;
-    border-left: solid 1px transparentize($detail-2-color, 0.3);;
     &:hover { cursor: pointer; }
   }
 
@@ -55,6 +56,7 @@
 
     .qr-secondary-actions a {
       color: $light-detail-2-color;
+      border-left: solid 1px transparentize($detail-2-color, 0.3);
     }
   }
 }
