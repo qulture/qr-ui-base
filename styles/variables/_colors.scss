@@ -1,4 +1,5 @@
 $admin-color: #E29958;
+// $admin-color: #1D3848;
 $employee-color: #01AE92;
 $white-color: #FFF;
 
@@ -9,6 +10,8 @@ $detail-4-color: #BAB9AD;
 $light-detail-1-color: #E0E0D0;
 $light-detail-2-color: #F3F3ED;
 $light-detail-3-color: #F0F0F0;
+$light-detail-4-color: #F6F6F6;
+$light-detail-5-color: #FAFAFA;
 
 $alert-color: #C95B5A;
 $warn-color: #F6D082;
@@ -32,6 +35,8 @@ $colors: (
   ('light-detail-1', $light-detail-1-color),
   ('light-detail-2', $light-detail-2-color),
   ('light-detail-3', $light-detail-3-color),
+  ('light-detail-4', $light-detail-4-color),
+  ('light-detail-5', $light-detail-5-color),
 
   ('alert', $alert-color),
   ('warn', $warn-color),
