@@ -4,37 +4,24 @@
   @include align-items(center);
   @include justify-content(center);
 
-  .value{
+  .info{
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
     @include position(absolute, 0 0 0 0);
 
     div{
+      @include main-color;
       font-size: rem(24);
       font-weight: 300;
     }
   }
 
-  // svg{
-  //   width: rem(71) !important;
-  //   height: rem(71) !important;
-  // }
+  .ct-series-a path{ @include main-stroke-color; }
+  .ct-series-b path{ stroke: $light-detail-2-color !important; }
 
-  // .ct-slice-donut{
-  //   stroke-width: 2px !important;
-  // }
-
-  .ct-series-b path{
-    stroke: transparentize($disabled-font-color, 0.8) !important;
+  @each $color-name, $color-value in $colors{
+    &.#{$color-name}-color .ct-series-a path { stroke: $color-value !important; }
+    &.#{$color-name}-color .info div { color: $color-value !important; }
   }
-
-  &.good .ct-series-a path{ stroke: $good-color !important; }
-  &.normal .ct-series-a path{ stroke: $normal-color !important; }
-  &.bad .ct-series-a path{ stroke: $bad-color !important; }
-
-  &.good .value div{ color: $good-color; }
-  &.normal .value div{ color: $normal-color; }
-  &.bad .value div{ color: $bad-color; }
-  &.light .value div{ color: $content-bg-color; }
 }
