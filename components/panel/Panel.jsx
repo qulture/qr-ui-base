@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
 
 function Panel(props) {
-  const { children, transparent } = props;
+  const { children, transparent, noMarginBottom } = props;
   let className = 'qr-panel';
   if(!!transparent) className += ' transparent';
+  if(!!noMarginBottom) className += ' no-margin-bottom';
 
   return (
     <div className={className}>
@@ -13,7 +14,8 @@ function Panel(props) {
 }
 
 Panel.propTypes = {
-  transparent: PropTypes.bool
+  transparent: PropTypes.bool,
+  noMarginBottom: PropTypes.bool
 }
 
 export default Panel;
