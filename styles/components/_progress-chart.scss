@@ -4,24 +4,31 @@
   @include align-items(center);
   @include justify-content(center);
 
-  .info{
+
+  .qr-progress-chart-info{
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
     @include position(absolute, 0 0 0 0);
 
-    div{
-      @include main-color;
-      font-size: rem(24);
-      font-weight: 300;
-    }
+  }
+
+  .qr-progress-chart-number{
+    @include main-color;
+    font-size: rem(24);
+    font-weight: 300;
+  }
+
+  &.large .qr-progress-chart-number {
+    font-size: rem(60);
+    font-weight: 100;
   }
 
   .ct-series-a path{ @include main-stroke-color; }
-  .ct-series-b path{ stroke: $light-detail-2-color !important; }
+  .ct-series-b path{ stroke: $light-detail-1-color !important; }
 
   @each $color-name, $color-value in $colors{
     &.#{$color-name}-color .ct-series-a path { stroke: $color-value !important; }
-    &.#{$color-name}-color .info div { color: $color-value !important; }
+    &.#{$color-name}-color .qr-progress-chart-info div { color: $color-value !important; }
   }
 }
