@@ -24,3 +24,12 @@
     color: $employee-color;
   }
 }
+
+@mixin main-stroke-color() {
+  stroke: $admin-color !important;
+
+  &.employee-user,
+  .employee-user &{
+    stroke: $employee-color !important;
+  }
+}
