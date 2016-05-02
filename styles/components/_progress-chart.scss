@@ -9,19 +9,35 @@
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
+    @include flex-direction(column);
     @include position(absolute, 0 0 0 0);
+  }
 
+  .qr-progress-chart-number,
+  .qr-progress-chart-label{
+    @include main-color;
   }
 
   .qr-progress-chart-number{
-    @include main-color;
     font-size: rem(24);
     font-weight: 300;
   }
 
-  &.large .qr-progress-chart-number {
-    font-size: rem(60);
-    font-weight: 100;
+  .qr-progress-chart-label{
+    font-size: $xxs-font-size;
+  }
+
+  &.large {
+    .qr-progress-chart-label{
+      font-size: $s-font-size;
+      position: relative;
+      top: rem(-4);
+    }
+
+    .qr-progress-chart-number {
+      font-size: rem(60);
+      font-weight: 100;
+    }
   }
 
   .ct-series-a path{ @include main-stroke-color; }
