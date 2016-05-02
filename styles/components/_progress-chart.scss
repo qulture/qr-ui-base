@@ -13,18 +13,28 @@
     @include position(absolute, 0 0 0 0);
   }
 
+  .qr-progress-chart-label-prefix,
+  .qr-progress-chart-label-sufix,
   .qr-progress-chart-number,
   .qr-progress-chart-label{
     @include main-color;
   }
 
   .qr-progress-chart-number{
+    @include display(flex);
+    @include align-items(center);
     font-size: rem(24);
     font-weight: 300;
   }
 
-  .qr-progress-chart-label{
+  .qr-progress-chart-label-prefix,
+  .qr-progress-chart-label-sufix {
     font-size: $xxs-font-size;
+    min-width: $m-font-size;
+  }
+
+  .qr-progress-chart-label{
+    font-size: $xs-font-size;
   }
 
   &.large {
@@ -37,6 +47,11 @@
     .qr-progress-chart-number {
       font-size: rem(60);
       font-weight: 100;
+    }
+
+    .qr-progress-chart-label-prefix,
+    .qr-progress-chart-label-sufix {
+      font-size: $s-font-size;
     }
   }
 
