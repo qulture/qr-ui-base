@@ -1,0 +1,14 @@
+.qr-button {
+  display: inline-block;
+  font-size: $font-size;
+  font-weight: 200;
+  padding: rem(19) rem(28);
+  border: solid 1px;
+  text-align: center;
+
+  &:hover { cursor: pointer; }
+
+  &.fixed-width { min-width: rem(180); }
+  &.fixed-width-large { min-width: rem(260); }
+
+}
