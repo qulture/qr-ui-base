@@ -1,4 +1,5 @@
 import Avatar from './Avatar';
+import AvatarInfo from './AvatarInfo';
 import Badge from './Badge';
 import Growl from './Growl';
 import Icon from './Icon';
@@ -12,6 +13,7 @@ import Toggle from './Toggle';
 
 export {
   Avatar,
+  AvatarInfo,
   Badge,
   Growl,
   Icon,

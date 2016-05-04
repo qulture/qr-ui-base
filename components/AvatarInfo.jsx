@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { NameFormatter } from '../helpers';
 import Badge from './Badge';
 
-class Avatar extends Component {
+class AvatarInfo extends Component {
   constructor(props) {
     super(props);
     this.renderAvatarText = this.renderAvatarText.bind(this);
@@ -10,17 +10,13 @@ class Avatar extends Component {
   }
 
   renderAvatarText() {
-    let { user, title, size, subtitle, hideName, color } = this.props;
-    if(!user || !!hideName) return '';
-    title = title || NameFormatter.getFirstAndLastName(user.profile.name);
-    const textWrapperClassName = `qr-avatar-text ${size}`;
-    const titleClassName = `${color}-color`;
-    const sibtitleClassName = `${color}-color`;
+    const { size, children, subtitle } = this.props;
+    const avatarClassName = `qr-avatar-text ${size}`;
 
     const avatarTextDOMItem = (
-      <div className={textWrapperClassName}>
-        <h4 className={titleClassName}>{title}</h4>
-        <p className={sibtitleClassName}>{subtitle}</p>
+      <div className={avatarClassName}>
+        <h4 className="default-font-size">{children}</h4>
+        <p className="s-font-size">{subtitle}</p>
       </div>
     );
 
@@ -59,17 +55,11 @@ class Avatar extends Component {
   }
 }
 
-Avatar.propTypes = {
+AvatarInfo.propTypes = {
   user: PropTypes.object,
   size: PropTypes.string,
-  color: PropTypes.string,
   subtitle: PropTypes.string,
-  hideName: PropTypes.bool,
   badgeText: PropTypes.node
 };
 
-Avatar.defaultProps = {
-  color: 'main'
-};
-
-export default Avatar;
+export default AvatarInfo;

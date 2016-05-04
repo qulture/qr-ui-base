@@ -33,7 +33,7 @@
   }
 
   .qr-avatar-text{
-    margin-left: rem(20);
+    margin-left: rem(18);
 
     h4,
     p{
@@ -42,7 +42,6 @@
 
     h4{
       font-size: $l-font-size;
-      @include main-color;
     }
 
     p{
@@ -53,10 +52,9 @@
     }
 
     &.small {
-      margin-left: rem(14);
+      margin-left: rem(12);
 
       h4 {
-        font-weight: 100;
         letter-spacing: 1.1;
         font-size: $m-font-size;
       }
