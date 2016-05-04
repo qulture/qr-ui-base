@@ -25,6 +25,11 @@
       @include size(rem(40));
       .qr-initials { font-size: rem(16); }
     }
+
+    &.x-large {
+      @include size(rem(145));
+      .qr-initials { font-size: rem(52); }
+    }
   }
 
   .qr-avatar-text{
