@@ -13,6 +13,10 @@
 .medium-weight { font-weight: 500 !important; }
 .bold-weight { font-weight: 600 !important; }
 
+.min-line-height { line-height: 1em; }
+.small-line-height { line-height: 1.15em; }
+.medium-line-height { line-height: 1.4em; }
+
 @each $size-name, $size in $font-sizes{
   &.#{$size-name}-font-size { font-size: $size !important; }
 }
