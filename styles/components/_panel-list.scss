@@ -1,0 +1,15 @@
+.qr-panel-content-list {
+  list-style: none;
+  padding: 0;
+}
+
+.qr-panel-content-list-item {
+  padding: $panel-padding / 2 $panel-padding;
+  &:not(:last-of-type) { border-bottom: solid 1px $light-detail-4-color; }
+
+  & > span,
+  & > div,
+  & > p {
+    color: $detail-3-color;
+  }
+}
