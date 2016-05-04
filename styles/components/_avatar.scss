@@ -10,6 +10,7 @@
     background: $light-detail-1-color;
     border-radius: 50%;
     @include size(rem(60));
+    min-width: rem(60);
 
     img,
     .qr-initials{
@@ -23,6 +24,7 @@
 
     &.small {
       @include size(rem(40));
+      min-width: rem(40);
       .qr-initials { font-size: rem(16); }
     }
 
