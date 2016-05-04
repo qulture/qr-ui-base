@@ -6,6 +6,7 @@ import IconLink from './IconLink';
 import Loading from './Loading';
 import Markdown from './Markdown';
 import PeriodsBar from './PeriodsBar';
+import Profile from './Profile';
 import Separator from './Separator';
 import Toggle from './Toggle';
 
@@ -18,6 +19,7 @@ export {
   Loading,
   Markdown,
   PeriodsBar,
+  Profile,
   Separator,
   Toggle
 }
