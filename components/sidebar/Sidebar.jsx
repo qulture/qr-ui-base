@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
 
 function Sidebar(props) {
-  const { children, small } = props;
+  const { children, small, medium } = props;
   let className = 'qr-sidebar';
   if(!!small) className += ' small';
+  if(!!medium) className += ' medium';
 
   return (
     <div className={className}>
@@ -13,7 +14,8 @@ function Sidebar(props) {
 }
 
 Sidebar.propTypes = {
-  small: PropTypes.bool
+  small: PropTypes.bool,
+  medium: PropTypes.bool,
 };
 
 export default Sidebar;

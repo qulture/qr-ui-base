@@ -8,9 +8,8 @@
     background: $light-detail-2-color;
     max-width: 30%;
 
-    &.small {
-      max-width: 20%;
-    }
+    &.medium { max-width: 25%; }
+    &.small { max-width: 20%; }
   }
 
   .qr-sidebar-section {
@@ -42,11 +41,7 @@
     @include flex-wrap(wrap);
   }
 
-  .with-sidebar > * {
-    width: 70%;
-  }
-
-  .with-small-sidebar > * {
-    width: 80%;
-  }
+  .with-sidebar > * { width: 70%; }
+  .with-small-sidebar > * { width: 80%; }
+  .with-medium-sidebar > * { width: 75%; }
 }
