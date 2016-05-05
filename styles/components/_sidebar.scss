@@ -43,7 +43,8 @@
   }
 
   .with-sidebar,
-  .with-small-sidebar {
+  .with-small-sidebar,
+  .with-medium-sidebar {
     @include display(flex);
     @include flex-wrap(wrap);
   }

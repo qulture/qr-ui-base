@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 
 function Sidebar(props) {
   const { children, small, medium, borderRight, borderLeft } = props;
-  console.log(borderRight);
   let className = 'qr-sidebar';
   if(!!small) className += ' small';
   if(!!medium) className += ' medium';
