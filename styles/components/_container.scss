@@ -103,4 +103,7 @@
     }
   }
 
+  .qr-main-content {
+    &.with-padding-left { padding-left: $panel-padding; }
+  }
 }
