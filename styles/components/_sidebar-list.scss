@@ -1,0 +1,27 @@
+.qr-sidebar-list-section {
+  display: block;
+  padding: $sidebar-padding 0;
+  border-top: solid 1px $light-detail-1-color;
+}
+
+.qr-sidebar-list-section-title {
+  padding: 0 $sidebar-padding;
+}
+
+.qr-sidebar-list-section-item {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+  padding: $sidebar-padding / 2 $sidebar-padding;
+
+  &.active {
+    background: $light-detail-4-color;
+    padding-right: rem(4);
+  }
+
+  &:hover:not(.active) { cursor: pointer; }
+}
+
+.qr-sidebar-list-section-item-content {
+  @include flex-grow(1);
+}

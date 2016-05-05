@@ -2,6 +2,18 @@
   display: none;
 }
 
+.qr-sidebar-return-link {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+  padding: $sidebar-padding / 2;
+  padding-left: 0;
+}
+
+.qr-sidebar-return-link-text {
+  @include flex-grow(1);
+}
+
 @media (min-width: $small-breakpoint) {
   .qr-sidebar {
     display: block;
