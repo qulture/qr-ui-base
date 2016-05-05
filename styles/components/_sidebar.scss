@@ -8,8 +8,15 @@
     background: $light-detail-2-color;
     max-width: 30%;
 
+    &.border-right,
+    &.border-left {
+      background: transparent;
+    }
+
     &.medium { max-width: 25%; }
     &.small { max-width: 20%; }
+    &.border-right { border-right: solid 1px $light-detail-1-color; }
+    &.border-left { border-left: solid 1px $light-detail-1-color; }
   }
 
   .qr-sidebar-section {
