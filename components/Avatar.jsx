@@ -15,12 +15,11 @@ class Avatar extends Component {
     title = title || NameFormatter.getFirstAndLastName(user.profile.name);
     const textWrapperClassName = `qr-avatar-text ${size}`;
     const titleClassName = `${color}-color`;
-    const sibtitleClassName = `${color}-color`;
 
     const avatarTextDOMItem = (
       <div className={textWrapperClassName}>
         <h4 className={titleClassName}>{title}</h4>
-        <p className={sibtitleClassName}>{subtitle}</p>
+        <p>{subtitle}</p>
       </div>
     );
 

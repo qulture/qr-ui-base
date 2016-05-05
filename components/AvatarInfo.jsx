@@ -10,13 +10,15 @@ class AvatarInfo extends Component {
   }
 
   renderAvatarText() {
-    const { size, children, subtitle } = this.props;
+    const { size, children, subtitle, color } = this.props;
     const avatarClassName = `qr-avatar-text ${size}`;
+    const titleClassName = `default-font-size ${color}-color`;
+    const subtitleClassName = size === 'small' ? 'xs-font-size' : 's-font-size';
 
     const avatarTextDOMItem = (
       <div className={avatarClassName}>
-        <h4 className="default-font-size">{children}</h4>
-        <p className="s-font-size">{subtitle}</p>
+        <h4 className={titleClassName}>{children}</h4>
+        <p className={subtitleClassName}>{subtitle}</p>
       </div>
     );
 
@@ -58,6 +60,7 @@ class AvatarInfo extends Component {
 AvatarInfo.propTypes = {
   user: PropTypes.object,
   size: PropTypes.string,
+  color: PropTypes.string,
   subtitle: PropTypes.string,
   badgeText: PropTypes.node
 };
