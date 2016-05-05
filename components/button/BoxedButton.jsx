@@ -7,7 +7,7 @@ function BoxedButton(props) {
 
   return (
     <Boxed color={borderColor}>
-      <IconLink type={icon} link={link} action={action} size="x-large" color={color}>
+      <IconLink type={icon} link={link} action={action} size="large" color={color}>
         {children}
       </IconLink>
     </Boxed>
