@@ -5,6 +5,7 @@ function Boxed(props) {
   let className=`qr-boxed-wrapper ${color}`;
   if(!!noPadding) className += ' no-padding';
   if(!!dashed) className += ' dashed-border';
+  if(!!rightContent) className += ' larger-padding-right';
   const rightContentDOMItem = !!rightContent ? <div className="right-content">{rightContent}</div> : '';
   const leftContentDOMItem = !!leftContent ? <div className="left-content">{leftContent}</div> : '';
 
