@@ -3,6 +3,7 @@ import AvatarInfo from './AvatarInfo';
 import Badge from './Badge';
 import Growl from './Growl';
 import Icon from './Icon';
+import IconDropdown from './IconDropdown';
 import IconLink from './IconLink';
 import Loading from './Loading';
 import Markdown from './Markdown';
@@ -17,6 +18,7 @@ export {
   Badge,
   Growl,
   Icon,
+  IconDropdown,
   IconLink,
   Loading,
   Markdown,
