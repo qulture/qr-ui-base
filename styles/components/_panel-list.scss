@@ -1,6 +1,11 @@
 .qr-panel-content-list {
   list-style: none;
   padding: 0;
+
+  &.fixed-height {
+    height: rem(400px);
+    overflow: scroll;
+  }
 }
 
 .qr-panel-content-list-item {
