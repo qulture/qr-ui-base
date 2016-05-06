@@ -32,7 +32,6 @@ $boxed-sides-padding: $input-padding;
     @include display(flex);
     @include align-items(center);
     position: absolute;
-    z-index: 10;
     top: 0;
   }
 
