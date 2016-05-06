@@ -43,30 +43,50 @@ class DropdownMenu extends Component {
   }
 
   renderDropdownOptions() {
-    const { children, label } = this.props;
+    const { children, label, fromRight } = this.props;
+    const optionsLabelDOMItem = !!label ? <div className="qr-dropdown-option main">{label}</div> : false;
+    let className = 'qr-dropdown-options';
+    if(!!fromRight) className += ' from-right';
 
     return (
-      <div className="qr-dropdown-options">
-        <div className="qr-dropdown-option main">{label}</div>
+      <div className={className}>
+        {optionsLabelDOMItem}
         {children}
       </div>
     );
   }
 
-  render() {
-    const { label, labelSize, color } = this.props;
-    const { open } = this.state;
-    const linkClassName = `qr-dropdown-link clicable ${color}-color`;
+  renderLink() {
+    const { label, labelSize, color, icon } = this.props;
     const labelClassName = `qr-dropdown-label ${labelSize}-font-size ${color}-color`;
-    const dropdownOptions = open ? this.renderDropdownOptions() : '';
+    const linkProps = {
+      className: 'clicable',
+      onClick: this.toggleDropdown,
+      onBlur: this.closeDropdown
+    };
+
+    if(!!icon) return <a {...linkProps}>{icon}</a>;
+
+    linkProps.className = `qr-dropdown-link clicable ${color}-color`;
+
+    return (
+      <a {...linkProps}>
+        <span className={labelClassName}>{label}</span>
+        <Icon type="caret-down" size="small" color={color} />
+      </a>
+    );
+  }
+
+  render() {
+    const { label, labelSize, color, icon } = this.props;
+    const { open } = this.state;
+    const dropdownOptionsDOMItems = open ? this.renderDropdownOptions() : '';
+    const linkDOMItem = this.renderLink();
 
     return(
       <div className="qr-dropdown">
-        <a className={linkClassName} onClick={this.toggleDropdown} onBlur={this.closeDropdown}>
-          <span className={labelClassName}>{label}</span>
-          <Icon type="caret-down" size="small" color={color} />
-        </a>
-        {dropdownOptions}
+        {linkDOMItem}
+        {dropdownOptionsDOMItems}
       </div>
     );
   }
@@ -75,7 +95,9 @@ class DropdownMenu extends Component {
 DropdownMenu.propTypes = {
   label: PropTypes.string,
   labelSize: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  icon: PropTypes.node,
+  fromRight: PropTypes.bool
 };
 
 DropdownMenu.defaultProps = {
