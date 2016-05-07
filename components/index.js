@@ -11,6 +11,7 @@ import PeriodsBar from './PeriodsBar';
 import Profile from './Profile';
 import Separator from './Separator';
 import Toggle from './Toggle';
+import VerticalSlider from './VerticalSlider';
 
 export {
   Avatar,
@@ -25,5 +26,6 @@ export {
   PeriodsBar,
   Profile,
   Separator,
-  Toggle
+  Toggle,
+  VerticalSlider
 }
