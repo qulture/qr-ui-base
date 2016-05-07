@@ -1,0 +1,18 @@
+.qr-progress-bar-wrapper {
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.qr-progress-bar {
+  @include flex(1);
+  height: 2px;
+}
+
+.qr-progress-bar-label {
+  min-width: rem(62);
+}
+
+.qr-progress-bar-line {
+  height: 100%;
+}
