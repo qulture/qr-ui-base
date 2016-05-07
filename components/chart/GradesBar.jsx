@@ -8,7 +8,7 @@ class GradesBar extends Component {
     const valuesDOMItems = _.map(values, function(item) {
       const value = item[valueKey];
       const itemWidth = value * 10;
-      const style = { width: `${itemWidth}` };
+      const style = { width: `${itemWidth}px` };
       const semaphoreColor = SemaphoreColors.getSemaphoreColor(value, { max, min });
       const className = `qr-grades-bar-item grading-${semaphoreColor}-bg-color`;
       return <div className={className} style={style}></div>
