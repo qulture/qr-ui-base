@@ -5,6 +5,7 @@ function ContainerContent(props) {
   let className = 'qr-container-content';
   if(!!fullWidth) className += ' full-width';
   if(!!withSidebar) className += ' with-sidebar';
+  if(!!withSmallSidebar) className += ' with-small-sidebar';
   if(!!withMediumSidebar) className += ' with-medium-sidebar';
   if(!!large) className += ' large';
 
