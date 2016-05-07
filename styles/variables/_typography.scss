@@ -6,6 +6,7 @@ $font-size: rem(18);
 $s-font-size: rem(14);
 $xs-font-size: rem(12);
 $xxs-font-size: rem(10);
+$xxxs-font-size: rem(6);
 
 $font-sizes: (
   ('xxl', $xxl-font-size),
@@ -16,4 +17,5 @@ $font-sizes: (
   ('s', $s-font-size),
   ('xs', $xs-font-size),
   ('xxs', $xxs-font-size),
+  ('xxxs', $xxxs-font-size),
 );
