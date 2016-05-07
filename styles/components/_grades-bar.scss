@@ -1,0 +1,10 @@
+.qr-grades-bar {
+  @include display(flex);
+  @include align-items(center);
+  height: rem(14);
+}
+
+.qr-grades-bar-item {
+  height: 100%;
+  margin-right: 1px;
+}
