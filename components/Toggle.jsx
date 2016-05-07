@@ -72,7 +72,7 @@ Toggle.defaultProps = {
   valueLeft: false,
   valueRight: true,
   activeLabelColor: 'main',
-  onChange: () => { console.log(1); }
+  onChange: () => {}
 };
 
 export default Toggle;
