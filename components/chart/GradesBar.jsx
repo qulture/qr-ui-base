@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import { SemaphoreColors } from 'meteor/qulture:qr-ui-base/helpers';
+import { SemaphoreColors } from './../../helpers';
+import Tooltip from './../Tooltip';
 
 class GradesBar extends Component {
   renderValues() {
@@ -12,7 +13,11 @@ class GradesBar extends Component {
       const style = { width: `${itemWidth}px` };
       const semaphoreColor = SemaphoreColors.getSemaphoreColor(value, { max, min });
       const className = `qr-grades-bar-item grading-${semaphoreColor}-bg-color`;
-      return <div key={name} className={className} style={style}></div>
+      return (
+        <Tooltip key={name} content={name}>
+          <div className={className} style={style}></div>
+        </Tooltip>
+      );
     });
 
     return valuesDOMItems;
