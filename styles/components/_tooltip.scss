@@ -1,0 +1,13 @@
+.qr-tooltip {
+  height: 100%;
+  position: relative;
+}
+
+.qr-tooltip-content {
+  position: absolute;
+  bottom: 130%;
+  background: $detail-1-color;
+  color: $white-color;
+  min-width: rem(150);
+  padding: $panel-padding / 1.5;
+}

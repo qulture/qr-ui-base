@@ -11,6 +11,7 @@ import PeriodsBar from './PeriodsBar';
 import Profile from './Profile';
 import Separator from './Separator';
 import Toggle from './Toggle';
+import Tooltip from './Tooltip';
 import VerticalSlider from './VerticalSlider';
 
 export {
@@ -27,5 +28,6 @@ export {
   Profile,
   Separator,
   Toggle,
+  Tooltip,
   VerticalSlider
 }
