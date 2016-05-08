@@ -3,15 +3,16 @@ import { SemaphoreColors } from 'meteor/qulture:qr-ui-base/helpers';
 
 class GradesBar extends Component {
   renderValues() {
-    const { max, min, values, valueKey } = this.props;
+    const { max, min, values, valueKey, labelKey } = this.props;
 
     const valuesDOMItems = _.map(values, function(item) {
+      const name = item[labelKey];
       const value = item[valueKey];
       const itemWidth = value * 10;
       const style = { width: `${itemWidth}px` };
       const semaphoreColor = SemaphoreColors.getSemaphoreColor(value, { max, min });
       const className = `qr-grades-bar-item grading-${semaphoreColor}-bg-color`;
-      return <div className={className} style={style}></div>
+      return <div key={name} className={className} style={style}></div>
     });
 
     return valuesDOMItems;
