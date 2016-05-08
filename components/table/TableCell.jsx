@@ -1,8 +1,11 @@
 import React, { PropTypes } from 'react';
 
 function TableCell(props) {
-  const { children, className, link } = props;
-  const content = !!link ? <a href={link} className="selector">{children}</a> : children;
+  let { children, className, link, color } = props;
+  const colorClass = ` ${color}-color`;
+  const linkClassName = `selector ${colorClass}`;
+  const content = !!link ? <a href={link} className={linkClassName}>{children}</a> : children;
+  className += colorClass;
 
   return (
     <td className={className}>
@@ -12,7 +15,8 @@ function TableCell(props) {
 }
 
 TableCell.propTypes = {
-  link: PropTypes.string
+  link: PropTypes.string,
+  color: PropTypes.string
 }
 
 export default TableCell;
