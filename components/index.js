@@ -3,6 +3,7 @@ import AvatarsGrid from './AvatarsGrid';
 import AvatarInfo from './AvatarInfo';
 import Badge from './Badge';
 import Growl from './Growl';
+import HoverIconLink from './HoverIconLink';
 import Icon from './Icon';
 import IconDropdown from './IconDropdown';
 import IconLink from './IconLink';
@@ -21,6 +22,7 @@ export {
   AvatarInfo,
   Badge,
   Growl,
+  HoverIconLink,
   Icon,
   IconDropdown,
   IconLink,

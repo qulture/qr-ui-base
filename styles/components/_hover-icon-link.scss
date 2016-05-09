@@ -1,0 +1,5 @@
+.qr-hover-icon-link {
+  @include display(flex);
+  @include align-items(center);
+  &:hover { cursor: pointer; }
+}
