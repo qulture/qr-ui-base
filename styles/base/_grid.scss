@@ -12,6 +12,7 @@
   .qr-grid-item{
     padding: $gutter;
 
+    &.small-gutter{ padding: $small-gutter; }
     &.medium-gutter{ padding: $medium-gutter; }
     &.large-gutter{ padding: $large-gutter; }
     // TESTING
