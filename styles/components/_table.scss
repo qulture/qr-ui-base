@@ -25,6 +25,13 @@ table {
 
     &.large,
     &.large span { font-size: rem(20); }
+
+    &.small,
+    &.small span {
+      font-size: rem(12);
+      font-weight: 200;
+      text-transform: none;
+    }
   }
 
   tr th span,
