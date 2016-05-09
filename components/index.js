@@ -1,4 +1,5 @@
 import Avatar from './Avatar';
+import AvatarsGrid from './AvatarsGrid';
 import AvatarInfo from './AvatarInfo';
 import Badge from './Badge';
 import Growl from './Growl';
@@ -16,6 +17,7 @@ import VerticalSlider from './VerticalSlider';
 
 export {
   Avatar,
+  AvatarsGrid,
   AvatarInfo,
   Badge,
   Growl,
