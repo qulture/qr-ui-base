@@ -17,6 +17,9 @@
 .small-line-height { line-height: 1.15em; }
 .medium-line-height { line-height: 1.4em; }
 
+.no-text-transform { text-transform: none !important; }
+.uppercase { text-transform: uppercase !important; }
+
 @each $size-name, $size in $font-sizes{
   &.#{$size-name}-font-size { font-size: $size !important; }
 }
