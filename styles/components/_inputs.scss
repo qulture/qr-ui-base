@@ -11,11 +11,6 @@ input[type='file'],
   min-height: rem(60);
 }
 
-input[type='file'] {
-  width: 100%;
-  padding: $input-padding;
-}
-
 textarea {
   padding: $input-padding;
   resize: none;

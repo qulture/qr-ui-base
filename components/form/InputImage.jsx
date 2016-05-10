@@ -56,7 +56,7 @@ class InputImage extends Component {
     }
 
     const boxedInputDOMItem = (
-      <Boxed color={color} rightContent={rightContent} noPadding>{inputDOMItem}</Boxed>
+      <Boxed color={color} rightContent={rightContent}>{inputDOMItem}</Boxed>
     );
 
     if(!label) return boxedInputDOMItem;
