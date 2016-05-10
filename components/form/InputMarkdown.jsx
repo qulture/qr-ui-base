@@ -28,10 +28,11 @@ class InputMarkdown extends Component {
     const inputProps = { ref, value, placeholder, onChange };
     const toggleViewIcon = previewing ? 'square-pencil' : 'eye';
     const contentDOMItem = previewing ? <Markdown value={value} /> : <TextareaAutosize minRows={5} {...inputProps} />;
+    const labelDOMItem = !!label ? <InputLabel>{label}</InputLabel> : false;
 
     return (
       <div className="qr-input-markdown">
-        <InputLabel>{label}</InputLabel>
+        {labelDOMItem}
         <Boxed color={color} rightContent={rightContent} leftContent={leftContent} noPadding dashed={previewing}>
           <div className="qr-input-markdown-options">
             <Icon type={toggleViewIcon} action={this.toggleView} color="detail-4" />
