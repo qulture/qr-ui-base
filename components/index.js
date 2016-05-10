@@ -2,6 +2,7 @@ import Avatar from './Avatar';
 import AvatarsGrid from './AvatarsGrid';
 import AvatarInfo from './AvatarInfo';
 import Badge from './Badge';
+import DatePicker from './DatePicker';
 import Growl from './Growl';
 import HoverIconLink from './HoverIconLink';
 import Icon from './Icon';
@@ -21,6 +22,7 @@ export {
   AvatarsGrid,
   AvatarInfo,
   Badge,
+  DatePicker,
   Growl,
   HoverIconLink,
   Icon,
