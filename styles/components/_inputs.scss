@@ -1,3 +1,4 @@
+input[type='file'],
 #{$all-text-inputs} {
   outline: none;
   text-align: center;
@@ -8,6 +9,11 @@
   font-size: rem(20);
   border: none;
   min-height: rem(60);
+}
+
+input[type='file'] {
+  width: 100%;
+  padding: $input-padding;
 }
 
 textarea {
