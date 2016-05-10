@@ -40,7 +40,7 @@ InputText.propTypes = {
   rightContent: PropTypes.node,
   leftContent: PropTypes.node,
   focus: PropTypes.bool,
-  noBox: PropTypes.bool,
+  onlyInput: PropTypes.bool,
 }
 
 InputText.defaultProps = {
