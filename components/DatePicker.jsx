@@ -22,6 +22,8 @@ class DatePicker extends Component {
     this.setToday = this.setToday.bind(this);
     this.selectDate = this.selectDate.bind(this);
     this.clearValue = this.clearValue.bind(this);
+    this.onCloseHandler = this.onCloseHandler.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -69,8 +71,16 @@ class DatePicker extends Component {
 
   onKeyDown(event) {
     const { keyCode } = event;
-    if(keyCode === LEFT_KEY) this.nextMonth();
-    if(keyCode === RIGHT_KEY) this.prevMonth();
+    console.log(keyCode);
+    if(keyCode === RIGHT_KEY) this.nextMonth();
+    if(keyCode === LEFT_KEY) this.prevMonth();
+  }
+
+  onCloseHandler() {
+    const { selectedDate } = this.state;
+    const { onClose } = this.props;
+    const newDate = !!selectedDate ? selectedDate.toDate() : null;
+    if(!!onClose) onClose(newDate);
   }
 
   renderHeader() {
@@ -197,7 +207,7 @@ class DatePicker extends Component {
           </GridItem>
 
           <GridItem>
-            <a className="qr-date-picker-footer-link m-font-sizes" onClick={onClose}>Close</a>
+            <a className="qr-date-picker-footer-link m-font-sizes" onClick={this.onCloseHandler}>Close</a>
           </GridItem>
         </Grid>
       </div>
@@ -213,7 +223,7 @@ class DatePicker extends Component {
     const footerDOMItem = this.renderFooter();
 
     return (
-      <div className="qr-date-picker-wrapper" onClick={onClose}>
+      <div className="qr-date-picker-wrapper" onClick={this.onCloseHandler}>
         <div className="qr-date-picker" onClick={this.stopParentClickPropagation}>
           {headerDOMItem}
           {bodyDOMItem}
