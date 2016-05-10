@@ -1,13 +1,19 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 function ModalContent(props) {
-  const { children } = props;
+  const { children, noPaddingRight } = props;
+  let className = 'qr-modal-content';
+  if(!!noPaddingRight) className += ' no-padding-right';
 
   return (
-    <div className="qr-modal-content">
+    <div className={className}>
       {children}
     </div>
   );
+}
+
+ModalContent.propTypes = {
+  noPaddingRight: PropTypes.bool
 }
 
 export default ModalContent;
