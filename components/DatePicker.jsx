@@ -206,7 +206,7 @@ class DatePicker extends Component {
 
   render() {
     const { open, onClose } = this.props;
-    // if(!open) return false;
+    if(!open) return false;
 
     const headerDOMItem = this.renderHeader();
     const bodyDOMItem = this.renderBody();
