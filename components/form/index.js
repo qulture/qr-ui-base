@@ -6,6 +6,7 @@ import InputLabel from './InputLabel';
 import InputGrading from './InputGrading';
 import InputMarkdown from './InputMarkdown';
 import InputImage from './InputImage';
+import InputDatePicker from './InputDatePicker';
 
 export {
   InputText,
@@ -15,5 +16,6 @@ export {
   InputLabel,
   InputGrading,
   InputMarkdown,
-  InputImage
+  InputImage,
+  InputDatePicker
 }
