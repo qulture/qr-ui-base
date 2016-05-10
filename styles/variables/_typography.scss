@@ -1,6 +1,7 @@
 $futura: Futura, "Trebuchet MS", Arial, sans-serif;
 $helvetica: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
+$xxxl-font-size: rem(72);
 $xxl-font-size: rem(44);
 $xl-font-size: rem(32);
 $l-font-size: rem(28);
@@ -12,6 +13,7 @@ $xxs-font-size: rem(10);
 $xxxs-font-size: rem(6);
 
 $font-sizes: (
+  ('xxxl', $xxxl-font-size),
   ('xxl', $xxl-font-size),
   ('xl', $xl-font-size),
   ('l', $l-font-size),
