@@ -24,6 +24,7 @@
   }
 }
 
+.qr-container-content.with-padding,
 .qr-container-title {
   padding-top: $content-padding;
 
@@ -64,9 +65,8 @@
   }
 
   .qr-container-content {
-    &.large {
-      padding-bottom: 0;
-    }
+    position: relative;
+    &.large { padding-bottom: 0; }
   }
 
   .qr-container-title {
@@ -100,7 +100,8 @@
     }
   }
 
-  .qr-container-title:not(.empty){
+  .qr-container-content.with-padding,
+  .qr-container-title:not(.empty) {
     position: relative;
     padding-right: $content-padding;
     padding-top: rem(48);
