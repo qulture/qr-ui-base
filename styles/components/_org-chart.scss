@@ -1,0 +1,78 @@
+@mixin chart-common-style-for-members {
+  ul{
+    text-align: left;
+    margin-left: rem(20);
+    padding: rem(20) 0 rem(20) rem(20);
+    list-style: none;
+    border-left: solid 1px $light-detail-1-color;
+
+    li{
+      position: relative;
+      padding: rem(20) 0;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: rem(-20);
+        top: rem(38);
+        width: rem(20);
+        height: rem(1);
+        border-top: solid 1px $light-detail-1-color;
+      }
+    }
+  }
+}
+
+.qr-org-chart{
+  display: block;
+  list-style: none;
+  min-width: 100%;
+  min-height: rem(300);
+  overflow-x: scroll;
+  overflow-y: scroll;
+  white-space: nowrap;
+  margin-top: 0;
+
+  &:not(.one-boss) {
+    & > li{
+      text-align: left;
+      min-width: rem(350);
+      display: inline-block;
+      vertical-align: top;
+      padding: rem(22);
+      padding-top: 0;
+
+      @include chart-common-style-for-members;
+    }
+  }
+
+  &.one-boss{
+    & > li{
+      padding: rem(60);
+      padding-top: 0;
+      padding-left: 0;
+      text-align: center;
+
+      & > .qr-avatar-wrapper {
+        width: 20%;
+        margin: auto;
+        padding-bottom: rem(25);
+      }
+
+      ul{
+        text-align: center;
+      }
+    }
+
+    & > li > ul > li{
+      text-align: left;
+      min-width: rem(350);
+      display: inline-block;
+      vertical-align: top;
+      padding: rem(22);
+      padding-left: 0;
+
+      @include chart-common-style-for-members;
+    }
+  }
+}
