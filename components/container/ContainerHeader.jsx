@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
-import Icon from './../Icon';
+import ContainerReturnLink from './ContainerReturnLink';
 
 function ContainerHeader(props) {
   const { children, returnLink, large, fullWidth, noPaddingLeft } = props;
-  const returnDOMItem = !!returnLink ? <Icon className="qr-container-title-return-link" color="detail-2" size="xx-large" type="angle-left" link={returnLink} /> : '';
+  const returnDOMItem = !!returnLink ? <ContainerReturnLink link={returnLink} /> : '';
   let className = 'qr-container-title';
   if(!!fullWidth) className += ' full-width';
   if(!!large) className += ' large';
