@@ -20,6 +20,11 @@
 .no-text-transform { text-transform: none !important; }
 .uppercase { text-transform: uppercase !important; }
 
+.thin-weight { font-weight: 100; }
+.light-weight { font-weight: 200; }
+.bold-weight { font-weight: 500; }
+.x-bold-weight { font-weight: 700; }
+
 @each $size-name, $size in $font-sizes{
   &.#{$size-name}-font-size { font-size: $size !important; }
 }
