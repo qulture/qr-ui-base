@@ -3,9 +3,9 @@ import React, { Component, PropTypes } from 'react';
 import { Boxed } from './../boxed';
 
 function InputRadio(props) {
-  const { value, label, onChange, checked, name } = props;
+  const { value, label, onChange, checked, name, labelClass } = props;
   const uniqueId = _.uniqueId();
-  const labelDOMItem = <label htmlFor={uniqueId}>{label}</label>;
+  const labelDOMItem = <label htmlFor={uniqueId} className={labelClass}>{label}</label>;
   const inputDOMItem = <input type="radio" id={uniqueId} value={value} name={name} onChange={onChange} checked={checked} />;
 
   return (
@@ -21,7 +21,8 @@ InputRadio.propTypes = {
   name: PropTypes.string,
   value: PropTypes.any,
   onChange: PropTypes.func,
-  checked: PropTypes.bool
+  checked: PropTypes.bool,
+  labelClass: PropTypes.string
 }
 
 export default InputRadio;
