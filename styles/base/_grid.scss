@@ -5,8 +5,6 @@
   width: 100%;
   list-style: none;
   padding: 0;
-  // TESTING
-  // Old margin: (-$gutter);
   margin: 0;
 
   .qr-grid-item{
@@ -15,7 +13,6 @@
     &.small-gutter{ padding: $small-gutter; }
     &.medium-gutter{ padding: $medium-gutter; }
     &.large-gutter{ padding: $large-gutter; }
-    // TESTING
     &:last-of-type { padding-right: 0; }
     &:first-of-type { padding-left: 0; }
   }
@@ -27,6 +24,7 @@
   &.full-height{ min-height: 100vh; }
   &.no-wrap{ @include flex-wrap(noWrap); }
   &.boxed{ padding: 0 $content-padding; }
+  &.fixed > .qr-grid-item { padding-left: 0; }
 
   @for $i from 1 through 100 {
     .s-#{$i} { @include flex-basis(percentage($i / 100)) }
