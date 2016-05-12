@@ -21,7 +21,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  color: 'detail-3'
+  color: 'detail-4'
 }
 
 export default Button;
