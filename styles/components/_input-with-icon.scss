@@ -1,0 +1,11 @@
+.qr-input-with-icon {
+  @include display(flex);
+  @include align-items(center);
+
+  #{$all-text-inputs} {
+    padding: rem(6);
+    display: inline-block;
+    height: 1em;
+    width: auto;
+  }
+}
