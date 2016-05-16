@@ -4,10 +4,11 @@
 }
 
 .qr-tooltip-content {
+  text-align: center;
   position: absolute;
   bottom: 130%;
   background: $detail-1-color;
   color: $white-color;
-  min-width: rem(150);
+  min-width: rem(200);
   padding: $panel-padding / 1.5;
 }
