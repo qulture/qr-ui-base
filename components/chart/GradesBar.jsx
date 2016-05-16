@@ -9,12 +9,13 @@ class GradesBar extends Component {
     const valuesDOMItems = _.map(values, function(item) {
       const name = item[labelKey];
       const value = item[valueKey];
+      const tooltip = `${name}: ${value}`;
       const itemWidth = value * 10;
       const style = { width: `${itemWidth}px` };
       const semaphoreColor = SemaphoreColors.getSemaphoreColor(value, { max, min });
       const className = `qr-grades-bar-item grading-${semaphoreColor}-bg-color`;
       return (
-        <Tooltip key={name} content={name}>
+        <Tooltip key={name} content={tooltip}>
           <div className={className} style={style}></div>
         </Tooltip>
       );
