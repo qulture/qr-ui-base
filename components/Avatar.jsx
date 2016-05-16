@@ -46,15 +46,18 @@ class Avatar extends Component {
   }
 
   render() {
+    const { link, action } = this.props;
     const avatarTextDOMItem = this.renderAvatarText();
     const avatarDOMItem = this.renderAvatar();
 
-    return (
+    const avatarWrapperDOMItem = (
       <div className="qr-avatar-wrapper">
         {avatarDOMItem}
         {avatarTextDOMItem}
       </div>
     );
+
+    return !!link || !!action ? <a className="clicable" href={link} onClick={action}>{avatarWrapperDOMItem}</a> : avatarWrapperDOMItem;
   }
 }
 
@@ -64,7 +67,9 @@ Avatar.propTypes = {
   color: PropTypes.string,
   subtitle: PropTypes.string,
   hideName: PropTypes.bool,
-  badgeText: PropTypes.node
+  badgeText: PropTypes.node,
+  link: PropTypes.string,
+  action: PropTypes.func,
 };
 
 Avatar.defaultProps = {
