@@ -1,0 +1,39 @@
+.qr-arrow-wrapper {
+  @include display(flex);
+  @include align-items(center);
+}
+
+.qr-arrow {
+  @include display(flex);
+  @include align-items(center);
+  padding: 0 rem(12);
+}
+
+.qr-arrow-line-wrapper {
+  text-align: center;
+}
+
+.qr-arrow-label,
+.qr-arrow-sublabel {
+  min-height: rem(22);
+  line-height: rem(22);
+  color: $detail-4-color;
+}
+
+.qr-arrow-label {
+  font-size: $s-font-size;
+}
+
+.qr-arrow-sublabel {
+  font-size: $xs-font-size;
+}
+
+.qr-arrow-line {
+  min-width: rem(200);
+  height: 2px;
+  background: $light-detail-1-color;
+}
+
+.qr-arrow-triangle {
+  @include triangle(rem(18), $light-detail-1-color, right);
+}

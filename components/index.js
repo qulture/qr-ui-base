@@ -1,3 +1,4 @@
+import ArrowBetweenUsers from './ArrowBetweenUsers';
 import Avatar from './Avatar';
 import AvatarsGrid from './AvatarsGrid';
 import AvatarInfo from './AvatarInfo';
@@ -18,6 +19,7 @@ import Tooltip from './Tooltip';
 import VerticalSlider from './VerticalSlider';
 
 export {
+  ArrowBetweenUsers,
   Avatar,
   AvatarsGrid,
   AvatarInfo,
