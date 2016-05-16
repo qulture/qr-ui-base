@@ -13,16 +13,16 @@ class Modal extends Component {
     this.handleBodyClass(props);
   }
 
-  handleBodyClass(newProps) {
-    !!newProps.open ? $('body').addClass('no-scroll') : $('body').removeClass('no-scroll');
-  }
-
   componentWillReceiveProps(newProps) {
     const { onOpen } = this.props
     this.handleBodyClass(newProps);
     // Call on open prop
     const isOpening = newProps.open !== this.props.open && newProps.open === OPEN;
     if(isOpening && onOpen) onOpen();
+  }
+
+  handleBodyClass(newProps) {
+    !!newProps.open ? $('body').addClass('no-scroll') : $('body').removeClass('no-scroll');
   }
 
   submitHandler(event) {
@@ -45,7 +45,7 @@ class Modal extends Component {
 
   render() {
     let { children, open, onClose, onSubmit, hideFooter } = this.props;
-    if(!open) return <div className="closedModal"></div>;
+    if(!open) return false;
     const footerDOMItem = this.renderFooter();
     const content = <div>{children}{footerDOMItem}</div>;
     const finalContentDOMItem = !!onSubmit ? <form onSubmit={this.submitHandler}>{content}</form> : content;
