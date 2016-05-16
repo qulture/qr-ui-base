@@ -8,12 +8,18 @@ class Modal extends Component {
     super(props);
     this.submitHandler = this.submitHandler.bind(this);
     this.renderFooter = this.renderFooter.bind(this);
+    this.handleBodyClass = this.handleBodyClass.bind(this);
+    // Init
+    this.handleBodyClass(props);
+  }
+
+  handleBodyClass(newProps) {
+    !!newProps.open ? $('body').addClass('no-scroll') : $('body').removeClass('no-scroll');
   }
 
   componentWillReceiveProps(newProps) {
     const { onOpen } = this.props
-    // Disable scroll for body
-    !!newProps.open ? $('body').addClass('no-scroll') : $('body').removeClass('no-scroll');
+    this.handleBodyClass(newProps);
     // Call on open prop
     const isOpening = newProps.open !== this.props.open && newProps.open === OPEN;
     if(isOpening && onOpen) onOpen();
