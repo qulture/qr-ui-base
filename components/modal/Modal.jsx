@@ -21,6 +21,10 @@ class Modal extends Component {
     if(isOpening && onOpen) onOpen();
   }
 
+  componentWillUnmount() {
+    this.handleBodyClass({});
+  }
+
   handleBodyClass(newProps) {
     !!newProps.open ? $('body').addClass('no-scroll') : $('body').removeClass('no-scroll');
   }
