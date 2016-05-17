@@ -48,15 +48,17 @@ class Modal extends Component {
   }
 
   render() {
-    let { children, open, onClose, onSubmit, hideFooter } = this.props;
+    const { children, open, onClose, onSubmit, hideFooter, large } = this.props;
     if(!open) return false;
     const footerDOMItem = this.renderFooter();
     const content = <div>{children}{footerDOMItem}</div>;
     const finalContentDOMItem = !!onSubmit ? <form onSubmit={this.submitHandler}>{content}</form> : content;
+    let className = 'qr-modal';
+    if(!!large) className += ' large';
 
     return (
       <div className="qr-modal-wrapper" onClick={onClose}>
-        <div className="qr-modal" onClick={this.stopParentClickPropagation}>
+        <div className={className} onClick={this.stopParentClickPropagation}>
           <IconLink className="qr-close-modal-link" type="close" action={onClose} size="large" />
           {finalContentDOMItem}
         </div>
@@ -71,6 +73,7 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   onSubmit: PropTypes.func,
   hideFooter: PropTypes.bool,
+  large: PropTypes.bool
 }
 
 export default Modal;

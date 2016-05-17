@@ -57,6 +57,8 @@
   .qr-modal {
     width: 75%;
     left: auto;
+
+    &.large { width: 90%; }
   }
 
   .qr-close-modal-link {
