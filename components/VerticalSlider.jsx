@@ -19,11 +19,23 @@ class VerticalSlider extends Component {
     // Init
     this.resetScrollVars();
     this.resetNumberPressVars();
+    this.handleOpenCloseEvents(props);
     this.state = { currentValue: value };
   }
 
   componentWillReceiveProps(newProps) {
     const { onOpen } = this.props
+    this.handleOpenCloseEvents(newProps);
+    // Call on open prop
+    const isOpening = newProps.open !== this.props.open && newProps.open === OPEN;
+    if(isOpening && onOpen) onOpen();
+  }
+
+  componentWillUnmount() {
+    this.handleOpenCloseEvents({});
+  }
+
+  handleOpenCloseEvents(newProps) {
     if(!!newProps.open) {
       $('body').addClass('no-scroll')
       $('body').on('keydown', this.onKeyDown);
@@ -31,9 +43,6 @@ class VerticalSlider extends Component {
       $('body').removeClass('no-scroll');
       $('body').off('keydown', this.onKeyDown);
     }
-    // Call on open prop
-    const isOpening = newProps.open !== this.props.open && newProps.open === OPEN;
-    if(isOpening && onOpen) onOpen();
   }
 
   submitHandler(event) {
@@ -84,6 +93,14 @@ class VerticalSlider extends Component {
     this.setNewValue(Number(newValue));
   }
 
+  getDecimalPrecision() {
+    const { step } = this.props;
+    const brokenStep = step.toString().split('.');
+    const hasDecimal = _.size(brokenStep) > 1;
+    if(!hasDecimal) return 0;
+    return _.size(_.last(brokenStep));
+  }
+
   increaseValue() {
     const { step } = this.props;
     const { currentValue } = this.state;
@@ -100,6 +117,7 @@ class VerticalSlider extends Component {
     const { max, min } = this.props;
     if(newValue > max) newValue = max;
     if(newValue < min) newValue = min;
+    newValue =  _.round(newValue, this.getDecimalPrecision());
     this.setState({ currentValue: newValue });
   }
 
@@ -108,9 +126,9 @@ class VerticalSlider extends Component {
   }
 
   renderNextValue(iterator, size) {
-    const { min, max } = this.props;
+    const { min, max, step } = this.props;
     const { currentValue } = this.state;
-    const value = currentValue + iterator;
+    const value = _.round(currentValue + (iterator * step), this.getDecimalPrecision());
     if(value > max || value < min) return false;
     const className = `qr-vertical-slider-value ${size}-font-size`;
     return <div className={className}>{value}</div>
