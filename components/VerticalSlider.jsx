@@ -6,7 +6,9 @@ const UP = 'up';
 const DOWN = 'down';
 const DOWN_KEY = 40;
 const UP_KEY = 38;
-const NUMBERS_KEYS = _.range(48, 58);
+const DOT_KEY = 190;
+const COMMA_KEY = 188;
+const NUMBERS_KEYS = _.concat(_.range(48, 58), [DOT_KEY, COMMA_KEY]);
 const SECONDS_FOR_COMBINE_NUMBERS = 0.8;
 
 class VerticalSlider extends Component {
@@ -83,14 +85,31 @@ class VerticalSlider extends Component {
     if(_.includes(NUMBERS_KEYS, keyCode)) this.handleNumberPress(keyCode);
   }
 
+  shouldAppendNumber() {
+    const { keyCode } = event;
+    if(keyCode === DOT_KEY || keyCode === COMMA_KEY) {
+      if(!_.size(this.lastKeysPresseds)) return false;
+      if(_.includes(this.lastKeysPresseds, DOT_KEY)) return false;
+      if(_.includes(this.lastKeysPresseds, COMMA_KEY)) return false;
+    }
+    return true;
+  }
+
   handleNumberPress(keyCode) {
     const currentDate = new Date();
     const intervalInSeconds = (currentDate - this.lastTimePressed) / 1000;
     if(intervalInSeconds > SECONDS_FOR_COMBINE_NUMBERS) this.resetNumberPressVars();
     this.lastTimePressed = currentDate;
-    this.lastKeysPresseds.push(keyCode);
-    const newValue = _.map(this.lastKeysPresseds, (key) => String.fromCharCode(key)).join('');
-    this.setNewValue(Number(newValue));
+    if(this.shouldAppendNumber()) {
+      this.lastKeysPresseds.push(keyCode);
+      const newValue = _.map(this.lastKeysPresseds, this.convertKeyCodeToNumber).join('');
+      this.setNewValue(Number(newValue));
+    }
+  }
+
+  convertKeyCodeToNumber(keyCode) {
+    if(keyCode === COMMA_KEY || keyCode === DOT_KEY) return '.';
+    return String.fromCharCode(keyCode);
   }
 
   getDecimalPrecision() {
