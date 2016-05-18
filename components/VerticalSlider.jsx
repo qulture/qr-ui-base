@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { SemaphoreColors } from './../helpers';
+import { Button } from './button';
 
 const UP = 'up';
 const DOWN = 'down';
@@ -38,20 +39,21 @@ class VerticalSlider extends Component {
   }
 
   handleOpenCloseEvents(newProps) {
+    const { dontHandleFixedBody } = newProps;
     if(!!newProps.open) {
-      $('body').addClass('no-scroll')
+      if(!dontHandleFixedBody) $('body').addClass('no-scroll')
       $('body').on('keydown', this.onKeyDown);
     } else {
-      $('body').removeClass('no-scroll');
+      if(!dontHandleFixedBody) $('body').removeClass('no-scroll');
       $('body').off('keydown', this.onKeyDown);
     }
   }
 
   submitHandler(event) {
-    if(!!event) event.preventDefault();
     const { onSubmit, onClose } = this.props;
-    if(onSubmit) onSubmit();
-    if(onClose) onClose();
+    if(!!event) event.preventDefault();
+    if(!!onSubmit) onSubmit();
+    if(!!onClose) onClose();
   }
 
   stopParentClickPropagation(event) {
@@ -154,7 +156,7 @@ class VerticalSlider extends Component {
   }
 
   render() {
-    const { value, open, min, max, sufix, prefix, onClose, onSubmit } = this.props;
+    const { value, open, min, max, sufix, prefix, onClose, instructions, submitLabel } = this.props;
     const { currentValue } = this.state;
     if(!open) return <div className="closedVerticalSlider"></div>;
 
@@ -171,7 +173,9 @@ class VerticalSlider extends Component {
     return (
       <div className="qr-vertical-slider-wrapper" onWheel={this.onScroll} onClick={onClose}>
         <div className={className} onClick={this.stopParentClickPropagation}>
-          <div className="qr-vertical-slider-instructions blank">&nbsp;</div>
+          <div className="qr-vertical-slider-instructions">
+            {instructions}
+          </div>
 
           {nextValueDOMItem3}
           {nextValueDOMItem2}
@@ -190,6 +194,8 @@ class VerticalSlider extends Component {
           <div className="qr-vertical-slider-instructions">
             Scroll or type to change
           </div>
+
+          <Button color="white" action={this.submitHandler} fixedWidth>{submitLabel}</Button>
         </div>
       </div>
     );
@@ -205,14 +211,17 @@ VerticalSlider.propTypes = {
   sufix: PropTypes.string,
   prefix: PropTypes.string,
   instructions: PropTypes.string,
+  submitLabel: PropTypes.string,
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
   onSubmit: PropTypes.func,
+  dontHandleFixedBody: PropTypes.bool
 }
 
 VerticalSlider.defaultProps = {
   step: 1,
-  value: 0
+  value: 0,
+  submitLabel: t('send')
 }
 
 export default VerticalSlider;
