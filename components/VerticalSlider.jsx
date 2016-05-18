@@ -19,6 +19,7 @@ class VerticalSlider extends Component {
     // Binds
     this.onScroll = this.onScroll.bind(this);
     this.onKeyDown = this.onKeyDown.bind(this);
+    this.submitHandler = this.submitHandler.bind(this);
     // Init
     this.resetScrollVars();
     this.resetNumberPressVars();
@@ -51,8 +52,9 @@ class VerticalSlider extends Component {
 
   submitHandler(event) {
     const { onSubmit, onClose } = this.props;
+    const { currentValue } = this.state;
     if(!!event) event.preventDefault();
-    if(!!onSubmit) onSubmit();
+    if(!!onSubmit) onSubmit(currentValue);
     if(!!onClose) onClose();
   }
 
