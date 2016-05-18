@@ -18,14 +18,14 @@ class HoverIconLink extends Component {
   }
 
   render() {
+    const { children, link, action, icon, iconBeforeText, color } = this.props;
     const { hovering } = this.state;
-    const { children, link, action, icon, iconBeforeText } = this.props;
     const className = 'qr-hover-icon-link';
 
     if(!hovering) return <div className={className} onMouseEnter={this.onMouseEnter}>{children}</div>;
-
-    const beferoDOMItem = !!iconBeforeText ? <Icon type={icon} /> : false;
-    const afterDOMItem = !iconBeforeText ? <Icon type={icon} /> : false;
+    const iconDOMItem = <Icon color={color} type={icon} />;
+    const beferoDOMItem = !!iconBeforeText ? iconDOMItem: false;
+    const afterDOMItem = !iconBeforeText ? iconDOMItem : false;
 
     return (
       <a className={className} href={link} onClick={action} onMouseLeave={this.onMouseLeave}>
@@ -39,6 +39,7 @@ class HoverIconLink extends Component {
 
 HoverIconLink.propTypes = {
   icon: PropTypes.string.isRequired,
+  color: PropTypes.string,
   iconBeforeText: PropTypes.bool,
   link: PropTypes.string,
   action: PropTypes.func,
