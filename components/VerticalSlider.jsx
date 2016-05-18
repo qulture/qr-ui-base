@@ -39,12 +39,12 @@ class VerticalSlider extends Component {
   }
 
   handleOpenCloseEvents(newProps) {
-    const { dontHandleFixedBody } = newProps;
+    const { disableFixedBodyControl } = newProps;
     if(!!newProps.open) {
-      if(!dontHandleFixedBody) $('body').addClass('no-scroll')
+      if(!disableFixedBodyControl) $('body').addClass('no-scroll')
       $('body').on('keydown', this.onKeyDown);
     } else {
-      if(!dontHandleFixedBody) $('body').removeClass('no-scroll');
+      if(!disableFixedBodyControl) $('body').removeClass('no-scroll');
       $('body').off('keydown', this.onKeyDown);
     }
   }
@@ -215,7 +215,7 @@ VerticalSlider.propTypes = {
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
   onSubmit: PropTypes.func,
-  dontHandleFixedBody: PropTypes.bool
+  disableFixedBodyControl: PropTypes.bool
 }
 
 VerticalSlider.defaultProps = {
