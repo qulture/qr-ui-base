@@ -71,7 +71,6 @@ class DatePicker extends Component {
 
   onKeyDown(event) {
     const { keyCode } = event;
-    console.log(keyCode);
     if(keyCode === RIGHT_KEY) this.nextMonth();
     if(keyCode === LEFT_KEY) this.prevMonth();
   }
