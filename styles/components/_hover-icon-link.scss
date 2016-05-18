@@ -2,4 +2,8 @@
   @include display(flex);
   @include align-items(center);
   &:hover { cursor: pointer; }
+
+  [class^="icon-"] {
+    margin-left: rem(4);
+  }
 }
