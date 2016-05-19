@@ -9,6 +9,7 @@ import HoverIconLink from './HoverIconLink';
 import Icon from './Icon';
 import IconDropdown from './IconDropdown';
 import IconLink from './IconLink';
+import Link from './Link';
 import Loading from './Loading';
 import Markdown from './Markdown';
 import PeriodsBar from './PeriodsBar';
@@ -30,6 +31,7 @@ export {
   Icon,
   IconDropdown,
   IconLink,
+  Link,
   Loading,
   Markdown,
   PeriodsBar,
