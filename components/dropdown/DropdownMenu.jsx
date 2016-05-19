@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
+import { ColorHelpers } from './../../helpers';
 import Icon from './../Icon';
 
 class DropdownMenu extends Component {
@@ -58,8 +59,10 @@ class DropdownMenu extends Component {
 
   renderLink() {
     const { label, labelSize, color, icon } = this.props;
+    const colorStyle = ColorHelpers.generateStyleForColor('color', color);
     const labelClassName = `qr-dropdown-label ${labelSize}-font-size ${color}-color`;
     const linkProps = {
+      style: colorStyle,
       className: 'clicable',
       onClick: this.toggleDropdown,
       onBlur: this.closeDropdown
@@ -71,14 +74,14 @@ class DropdownMenu extends Component {
 
     return (
       <a {...linkProps}>
-        <span className={labelClassName}>{label}</span>
+        <span className={labelClassName} style={colorStyle}>{label}</span>
         <Icon type="caret-down" size="small" color={color} />
       </a>
     );
   }
 
   render() {
-    const { label, labelSize, color, icon } = this.props;
+    const { label, labelSize, icon } = this.props;
     const { open } = this.state;
     const dropdownOptionsDOMItems = open ? this.renderDropdownOptions() : '';
     const linkDOMItem = this.renderLink();
