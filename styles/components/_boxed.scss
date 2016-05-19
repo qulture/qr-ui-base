@@ -3,7 +3,7 @@ $boxed-sides-padding: $input-padding;
 
 .qr-boxed-wrapper {
   background: white;
-  border: solid 1px $light-detail-1-color;
+  border: solid 1px;
   width: 100%;
   margin-bottom: rem(32);
   padding: $boxed-top-bottom-padding $boxed-sides-padding;
@@ -15,10 +15,6 @@ $boxed-sides-padding: $input-padding;
   .qr-grid-item { align-self: center; }
   &.larger-padding-right { padding-right: rem(82); }
   &.no-padding { padding: 0; }
-
-  @each $color-name, $color-value in $colors{
-    &.#{$color-name} { border-color: $color-value; }
-  }
 }
 
 .qr-boxed-group,

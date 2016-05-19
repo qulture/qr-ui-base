@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 function Boxed(props) {
   const { children, color, noPadding, rightContent, leftContent, dashed } = props;
-  let className=`qr-boxed-wrapper ${color}`;
+  let className=`qr-boxed-wrapper ${color}-border-color`;
   if(!!noPadding) className += ' no-padding';
   if(!!dashed) className += ' dashed-border';
   if(!!rightContent) className += ' larger-padding-right';
@@ -24,6 +24,10 @@ Boxed.propTypes = {
   rightContent: PropTypes.node,
   leftContent: PropTypes.node,
   dashed: PropTypes.bool
-}
+};
+
+Boxed.defaultProps = {
+  color: 'light-detail-1'
+};
 
 export default Boxed;
