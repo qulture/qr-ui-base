@@ -5,8 +5,13 @@ function getMainColor() {
   return QRUIBaseSettings.getCustomMainColor();
 }
 
-function generateStyleForColor(local, color) {
+function generateStyleForColor(locales, color) {
   if(color !== 'main') return {};
+  if(_.isString(locales)) return getStyleColorByLocal(locales);
+  return _.merge(..._.map(locales, getStyleColorByLocal));
+}
+
+function getStyleColorByLocal(local) {
   switch (local) {
     case 'bg': return generateBackgroundColorStyle();
     case 'background': return generateBackgroundColorStyle();
