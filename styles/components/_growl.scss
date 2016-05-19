@@ -8,6 +8,7 @@
   background: $light-detail-2-color;
   box-shadow: $common-shaddow;
   padding: rem(18);
+  z-index: 140;
 
   &.info { background: lighten($info-color, 20%); }
   &.success { background: lighten($success-color, 10%); }
