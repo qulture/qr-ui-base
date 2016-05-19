@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react';
+import { ColorHelpers } from './../helpers';
 
 function Separator(props) {
   const { size, withLine, lineWidth, lineStyle, lineColor } = props;
 
-  const style = { borderWidth: lineWidth };
+  const style = ColorHelpers.generateStyleForColor('border', lineColor);
+  style.borderWidth = lineWidth;
   const lineClassName = `qr-separator-line ${lineStyle}-border ${lineColor}-border-color`;
   const separatorDOMItem = (!!withLine || !!lineStyle || !!lineWidth || !!lineColor) ? <div className={lineClassName} style={style}></div> : false;
 
