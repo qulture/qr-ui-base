@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { ColorHelpers } from './../../helpers';
 
 function Boxed(props) {
   const { children, color, noPadding, rightContent, leftContent, dashed } = props;
@@ -8,9 +9,10 @@ function Boxed(props) {
   if(!!rightContent) className += ' larger-padding-right';
   const rightContentDOMItem = !!rightContent ? <div className="right-content">{rightContent}</div> : '';
   const leftContentDOMItem = !!leftContent ? <div className="left-content">{leftContent}</div> : '';
+  const style = ColorHelpers.generateStyleForColor('border', color);
 
   return (
-    <div className={className}>
+    <div className={className} style={style}>
       {leftContentDOMItem}
       {children}
       {rightContentDOMItem}
