@@ -6,7 +6,7 @@ function PanelFooterLink(props) {
   const className = `qr-panel-footer-link text-${align}`;
 
   return (
-    <Link className={className} action={action} link={link}>
+    <Link className={className} action={action} link={link} color={color}>
       {children}
     </Link>
   );
