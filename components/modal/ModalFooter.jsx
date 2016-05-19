@@ -1,12 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import Link from './../Link';
 
 function ModalFooter(props) {
   const { children, action, link, isSubmit } = props;
   let contentDOMItem;
-  if(!!action || !!link) {
-    contentDOMItem = <a href={link} className="clicable" onClick={action}>{children}</a>;
-  } else if(isSubmit) {
-    contentDOMItem = <button type="submit" className="clicable">{children}</button>;
+  if(!!action || !!link || !!isSubmit) {
+    contentDOMItem = <Link link={link} action={action} isSubmit={isSubmit}>{children}</Link>;
   } else {
     contentDOMItem = {children};
   }
