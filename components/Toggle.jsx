@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { ColorHelpers } from './../helpers';
 
 class Toggle extends Component {
   constructor(props) {
@@ -39,6 +40,9 @@ class Toggle extends Component {
     let labelRightClassName = 'qr-toggle-label-right';
     labelRightClassName += checkedRight ? activeLabelClasses : inactiveLabelClasses;
 
+    const labelLeftStyle = checkedLeft ? ColorHelpers.generateStyleForColor('color', activeLabelColor) : {};
+    const labelRightStyle = checkedRight ? ColorHelpers.generateStyleForColor('color', activeLabelColor) : {};
+
     return (
       <div>
         <div className="hide">
@@ -46,11 +50,11 @@ class Toggle extends Component {
           <input name={name} type="radio" value={valueRight} onChange={onChange} checked={checkedRight} />
         </div>
         <label className="qr-toggle-wrapper" onClick={this.onToggle}>
-          <div className={labelLeftClassName}>{labelLeft}</div>
+          <div className={labelLeftClassName} style={labelLeftStyle}>{labelLeft}</div>
           <div className={toggleClassName}>
             <div className="qr-toggle-ball"></div>
           </div>
-          <div className={labelRightClassName}>{labelRight}</div>
+          <div className={labelRightClassName} style={labelRightStyle}>{labelRight}</div>
         </label>
       </div>
     );
