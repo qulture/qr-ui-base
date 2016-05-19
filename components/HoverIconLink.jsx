@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import { ColorHelpers } from './../helpers';
 import Icon from './Icon';
 
 class HoverIconLink extends Component {
@@ -21,6 +22,7 @@ class HoverIconLink extends Component {
     const { children, link, action, icon, iconBeforeText, color } = this.props;
     const { hovering } = this.state;
     const className = 'qr-hover-icon-link';
+    const style = ColorHelpers.generateStyleForColor('color', color);
 
     if(!hovering) return <div className={className} onMouseEnter={this.onMouseEnter}>{children}</div>;
     const iconDOMItem = <Icon color={color} type={icon} />;
@@ -28,7 +30,7 @@ class HoverIconLink extends Component {
     const afterDOMItem = !iconBeforeText ? iconDOMItem : false;
 
     return (
-      <a className={className} href={link} onClick={action} onMouseLeave={this.onMouseLeave}>
+      <a className={className} style={style} href={link} onClick={action} onMouseLeave={this.onMouseLeave}>
         {beferoDOMItem}
         {children}
         {afterDOMItem}
@@ -43,7 +45,10 @@ HoverIconLink.propTypes = {
   iconBeforeText: PropTypes.bool,
   link: PropTypes.string,
   action: PropTypes.func,
-
 };
+
+HoverIconLink.defaultProps = {
+  color: 'main'
+}
 
 export default HoverIconLink;
