@@ -1,12 +1,6 @@
 @each $color-name, $color-value in $colors{
   .#{$color-name}-color { color: $color-value !important; }
-}
-
-@each $color-name, $color-value in $colors{
   .#{$color-name}-bg-color { background-color: $color-value !important; }
-}
-
-@each $color-name, $color-value in $colors{
   .#{$color-name}-border-color { border-color: $color-value !important; }
 }
 
