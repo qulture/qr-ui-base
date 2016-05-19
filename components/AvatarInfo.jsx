@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { NameFormatter } from '../helpers';
+import { NameFormatter, ColorHelpers } from '../helpers';
 import Badge from './Badge';
 
 class AvatarInfo extends Component {
@@ -14,10 +14,11 @@ class AvatarInfo extends Component {
     const avatarClassName = `qr-avatar-text ${size}`;
     const titleClassName = `default-font-size ${color}-color`;
     const subtitleClassName = size === 'small' ? 'xs-font-size' : 's-font-size';
+    const titleStyle = ColorHelpers.generateStyleForColor('color', color);
 
     const avatarTextDOMItem = (
       <div className={avatarClassName}>
-        <h4 className={titleClassName}>{children}</h4>
+        <h4 className={titleClassName} style={titleStyle}>{children}</h4>
         <p className={subtitleClassName}>{subtitle}</p>
       </div>
     );
