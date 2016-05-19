@@ -11,10 +11,5 @@
     padding: rem(18);
     font-size: $font-size;
     min-width: rem(130);
-
-    &.active {
-      @include main-border-color;
-      @include main-color;
-    }
   }
 }
