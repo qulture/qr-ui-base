@@ -8,7 +8,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.3.2.4');
-  api.export('QRComponents');
+  api.export('QRUIBaseSettings');
 
   api.use('ecmascript');
   api.use('fourseven:scss@3.4.3');
@@ -23,4 +23,5 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.addFiles('styles/_qr-base.scss', 'client', { isImport: true });
+  api.addFiles('qr-ui-base.js', 'client');
 });
