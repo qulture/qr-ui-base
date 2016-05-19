@@ -27,6 +27,7 @@
   @include display(flex);
   @include justify-content(center);
   @include align-items(center);
+  width: 100%;
   &.active { margin: rem(6) 0; }
 
   .sufix,
