@@ -7,7 +7,7 @@
 }
 
 @each $color-name, $color-value in $colors{
-  .#{$color-name}-border-color { background-color: $color-value !important; }
+  .#{$color-name}-border-color { border-color: $color-value !important; }
 }
 
 .main-color { @include main-color; }
