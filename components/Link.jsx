@@ -2,15 +2,19 @@ import React, { PropTypes } from 'react';
 import { ColorHelpers } from './../helpers';
 
 function Link(props) {
-  let { children, link, action, color, className } = props;
-  className += ` ${color}-color`;
+  let { children, link, action, color, className, isSubmit } = props;
+  className += ` clicable ${color}-color`;
   const style = ColorHelpers.generateStyleForColor('color', color);
 
-  return (
-    <a href={link} onClick={action} className={className} style={style}>
-      {children}
-    </a>
-  )
+  const commonProps = {
+    href: link,
+    onClick: action,
+    className,
+    style
+  };
+
+  if(isSubmit) return <button type="submit" {...commonProps}>{children}</button>;
+  return <a {...commonProps}>{children}</a>;
 }
 
 Link.propTypes = {
