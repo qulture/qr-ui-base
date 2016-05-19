@@ -6,7 +6,7 @@ function getMainColor() {
 }
 
 function generateStyleForColor(local, color) {
-  if(color !== 'main') return false;
+  if(color !== 'main') return {};
   switch (local) {
     case 'bg': return generateBackgroundColorStyle();
     case 'background': return generateBackgroundColorStyle();
