@@ -15,10 +15,10 @@ function BoxedLineGroup(props) {
   );
 }
 
-Boxed.propTypes = {
+BoxedLineGroup.propTypes = {
   rightContent: PropTypes.node,
   leftContent: PropTypes.node,
   noPadding: PropTypes.bool,
-}
+};
 
 export default BoxedLineGroup;
