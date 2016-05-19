@@ -1,15 +1,14 @@
 import React, { PropTypes } from 'react';
+import Link from './../Link';
 
 function TableCell(props) {
   let { children, className, link, color, cols, rows, action } = props;
-  const colorClass = ` ${color}-color`;
-  const linkClassName = `selector ${colorClass}`;
-  const content = !!link || !!action ? <a href={link} onClick={action} className={linkClassName}>{children}</a> : children;
-  className += colorClass;
+  const contentDOMItem = !!link || !!action ? <Link link={link} action={action} className="selector" color={color}>{children}</Link> : children;
+  className += ` ${color}-color`;
 
   return (
     <td className={className} rowSpan={rows} colSpan={cols}>
-      {content}
+      {contentDOMItem}
     </td>
   );
 }
