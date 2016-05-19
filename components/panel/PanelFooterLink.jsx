@@ -1,13 +1,14 @@
 import React, { PropTypes } from 'react';
+import Link from './../Link';
 
 function PanelFooterLink(props) {
   const { children, color, action, link, align } = props;
-  const className = `qr-panel-footer-link ${color}-color text-${align}`;
+  const className = `qr-panel-footer-link text-${align}`;
 
   return (
-    <a className={className} onClick={action} href={link}>
+    <Link className={className} action={action} link={link}>
       {children}
-    </a>
+    </Link>
   );
 }
 
