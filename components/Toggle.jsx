@@ -10,7 +10,7 @@ class Toggle extends Component {
   }
 
   onToggle() {
-    const { valueLeft, valueRight } = this.props;
+    const { valueLeft, valueRight, onChange } = this.props;
     const { currentValue } = this.state;
     let newValue;
     if(currentValue === valueRight) {
@@ -18,6 +18,7 @@ class Toggle extends Component {
     } else {
       newValue = valueRight
     }
+    if(!!onChange) onChange(newValue);
     this.setState({ currentValue: newValue });
   }
 
