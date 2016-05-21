@@ -9,3 +9,8 @@
 .no-padding-bottom { padding-bottom: 0 !important; }
 .no-padding-left { padding-left: 0 !important; }
 .no-padding-right { padding-right: 0 !important; }
+
+.full-width { width: 100%; }
+.large-width { max-width: rem(640); }
+.medium-width { max-width: rem(482); }
+.small-width { max-width: rem(290); }
