@@ -53,9 +53,14 @@
 .qr-container-title-return-link {
   z-index: 120;
   position: fixed;
-  color: white;
   left: rem(12);
   top: rem(18);
+}
+
+@media (max-width: $small-breakpoint) {
+  .qr-container-title-return-link {
+    color: white !important;
+  }
 }
 
 @media (min-width: $small-breakpoint) {
