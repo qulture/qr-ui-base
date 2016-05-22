@@ -6,7 +6,7 @@ input[type='file'],
   width: 100%;
   height: 100%;
   padding: 0 $input-padding;
-  font-size: rem(20);
+  font-size: $font-size;
   border: none;
   min-height: rem(60);
 }
