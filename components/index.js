@@ -15,6 +15,7 @@ import Markdown from './Markdown';
 import PeriodsBar from './PeriodsBar';
 import Profile from './Profile';
 import Separator from './Separator';
+import Text from './Text';
 import Toggle from './Toggle';
 import Tooltip from './Tooltip';
 import VerticalSlider from './VerticalSlider';
@@ -37,6 +38,7 @@ export {
   PeriodsBar,
   Profile,
   Separator,
+  Text,
   Toggle,
   Tooltip,
   VerticalSlider
