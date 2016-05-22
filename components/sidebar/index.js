@@ -6,6 +6,7 @@ import WithSidebar from './WithSidebar';
 import SidebarListSection from './SidebarListSection';
 import SidebarListSectionItem from './SidebarListSectionItem';
 import SidebarReturnLink from './SidebarReturnLink';
+import SidebarListSectionIconItem from './SidebarListSectionIconItem';
 
 export {
   Sidebar,
@@ -15,5 +16,6 @@ export {
   WithSidebar,
   SidebarListSection,
   SidebarListSectionItem,
-  SidebarReturnLink
+  SidebarReturnLink,
+  SidebarListSectionIconItem
 };
