@@ -6,19 +6,25 @@
   .qr-markdown-preview,
   textarea {
     padding: 0 $input-padding;
+    position: relative;
+    top: rem(-12);
   }
 }
 
 .qr-input-markdown-options,
 .qr-input-markdown-message {
-  padding: rem(8) $input-padding / 2;
+  z-index: 10;
+  padding: rem(8) $input-padding rem(8) $input-padding / 2;
   width: 100%;
   text-align: right;
   color: $detail-4-color;
 }
 
-.qr-input-markdown-message {
+.qr-input-markdown-options {
+  padding-bottom: 0;
+}
 
+.qr-input-markdown-message {
   &,
   a {
     margin: 0;
