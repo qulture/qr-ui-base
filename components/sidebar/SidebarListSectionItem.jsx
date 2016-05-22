@@ -5,7 +5,7 @@ function SidebarListSectionItem(props) {
   const { children, sideContent, link, action, active } = props;
   let className = 'qr-sidebar-list-section-item';
   if(active) className += ' active';
-  const sideContentDOMItem = !!active ? <Icon type="angle-right" size="x-large" color="detail-3" /> : sideContent;
+  const sideContentDOMItem = !!active ? <Icon type="angle-right" size="x-large" /> : sideContent;
 
   return (
     <a className={className} href={link} onClick={action}>
