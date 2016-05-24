@@ -19,6 +19,7 @@
 
 
   &.justify-start { @include justify-content(flex-start) };
+  &.justify-end { @include justify-content(flex-end) };
   &.column-direction{ @include flex-direction(column); }
   &.center-align{ @include align-items(center); }
   &.full-height{ min-height: 100vh; }
