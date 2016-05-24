@@ -9,9 +9,12 @@
 
 .thin-weight { font-weight: 100 !important; }
 .light-weight { font-weight: 200 !important; }
-.normal-weight { font-weight: 500 !important; }
-.medium-weight { font-weight: 500 !important; }
-.bold-weight { font-weight: 600 !important; }
+.normal-weight { font-weight: 300 !important; }
+.medium-weight { font-weight: 400 !important; }
+.bold-weight { font-weight: 500 !important; }
+.x-bold-weight { font-weight: 600; }
+.xx-bold-weight { font-weight: 700; }
+.xxx-bold-weight { font-weight: 900; }
 
 .min-line-height { line-height: 1em; }
 .small-line-height { line-height: 1.15em; }
@@ -19,11 +22,6 @@
 
 .no-text-transform { text-transform: none !important; }
 .uppercase { text-transform: uppercase !important; }
-
-.thin-weight { font-weight: 100; }
-.light-weight { font-weight: 200; }
-.bold-weight { font-weight: 500; }
-.x-bold-weight { font-weight: 700; }
 
 @each $size-name, $size in $font-sizes{
   &.#{$size-name}-font-size { font-size: $size !important; }
