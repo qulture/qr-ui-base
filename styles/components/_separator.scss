@@ -9,5 +9,8 @@
 }
 
 .qr-separator-line {
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
   border-top: dashed 1px $light-detail-2-color;
 }
