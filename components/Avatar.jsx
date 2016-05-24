@@ -10,16 +10,19 @@ class Avatar extends Component {
   }
 
   renderAvatarText() {
-    let { user, title, size, subtitle, hideName, color } = this.props;
+    let { user, title, size, subtitle, hideName, color, badgeOnName } = this.props;
     if(!user || !!hideName) return '';
     title = title || NameFormatter.getFirstAndLastName(user.profile.name);
     const textWrapperClassName = `qr-avatar-text ${size}`;
     const titleClassName = `${color}-color`;
     const titleStyle = ColorHelpers.generateStyleForColor('color', color);
 
+    let titleDOMItem = <h4 className={titleClassName} style={titleStyle}>{title}</h4>;
+    if(!!badgeOnName) titleDOMItem = <Badge size="small" color={color}>{titleDOMItem}</Badge>;
+
     const avatarTextDOMItem = (
       <div className={textWrapperClassName}>
-        <h4 className={titleClassName} style={titleStyle}>{title}</h4>
+        {titleDOMItem}
         <p>{subtitle}</p>
       </div>
     );
@@ -28,20 +31,12 @@ class Avatar extends Component {
   }
 
   renderAvatar() {
-    const { user, size, badgeText } = this.props;
+    const { user, size } = this.props;
     const initials = NameFormatter.getInitials(user.profile.name);
     const image = false;
     const avatarClassName = `qr-avatar ${size}`;
     const avatarImageOrInitialsDOMItem = !image ? <div className="qr-initials">{initials}</div> : <img src={image} />;
     const avatarWrapperDOMItem = <div className={avatarClassName}>{avatarImageOrInitialsDOMItem}</div>
-
-    if(!!badgeText) {
-      return (
-        <Badge text={badgeText}>
-          {avatarWrapperDOMItem}
-        </Badge>
-      );
-    }
 
     return avatarWrapperDOMItem;
   }
@@ -68,7 +63,7 @@ Avatar.propTypes = {
   color: PropTypes.string,
   subtitle: PropTypes.string,
   hideName: PropTypes.bool,
-  badgeText: PropTypes.node,
+  badgeOnName: PropTypes.string,
   link: PropTypes.string,
   action: PropTypes.func,
 };

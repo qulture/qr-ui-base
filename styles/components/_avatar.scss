@@ -61,6 +61,9 @@
     }
 
     &.small h4 { font-size: $m-font-size; }
-    &.x-small h4 { font-size: $font-size; }
+    &.x-small {
+      h4 { font-size: $font-size; }
+      p { font-size: $xs-font-size; }
+    }
   }
 }
