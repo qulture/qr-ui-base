@@ -63,7 +63,7 @@ Avatar.propTypes = {
   color: PropTypes.string,
   subtitle: PropTypes.string,
   hideName: PropTypes.bool,
-  badgeOnName: PropTypes.string,
+  badgeOnName: PropTypes.any,
   link: PropTypes.string,
   action: PropTypes.func,
 };
