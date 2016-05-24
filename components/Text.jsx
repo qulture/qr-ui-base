@@ -19,7 +19,7 @@ Text.propTypes = {
 
 Text.defaultProps = {
   className: '',
-  color: 'main'
+  color: 'detail-1'
 };
 
 export default Text;
