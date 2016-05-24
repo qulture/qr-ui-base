@@ -1,18 +1,32 @@
+$small-badge-size: rem(12);
+$badge-size: rem(20);
+
 .qr-badge{
   position: relative;
 
   .qr-badge-content{
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
     position: absolute;
-    right: rem(-10);
-    bottom: rem(-10);
+    right: rem(-8);
+    top: rem(-8);
     font-weight: 200;
-    font-size: rem(14);
-    color: $content-bg-color;
-    letter-spacing: 1.39px;
-    background: $main-color;
-    min-height: rem(33);
-    border-radius: rem(33);
-    padding: rem(6);
-    padding-top: rem(9);
+    font-size: $xxs-font-size;
+    color: $white-color;
+    background: $detail-4-color;
+    border-radius: $badge-size;
+    height: $badge-size;
+    min-width: $badge-size;
+
+    &.small {
+      right: rem(-6);
+      top: rem(-2);
+      font-size: $xxxs-font-size;
+      border-radius: $small-badge-size;
+      height: $small-badge-size;
+      min-width: $small-badge-size;
+    }
   }
+
 }

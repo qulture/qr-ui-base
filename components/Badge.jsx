@@ -1,20 +1,30 @@
 import React, { Component, PropTypes } from 'react';
+import { ColorHelpers } from './../helpers';
 
 function Badge(props) {
-  const { text, children } = props;
+  const { children, color, content, textColor, size } = props;
+  const wrapperClassName = `qr-badge ${textColor}-color`;
+  const badgeClassName = `qr-badge-content ${color}-bg-color ${size}`;
+  const wrapperStyle = ColorHelpers.generateStyleForColor('color', textColor);
+  const badgeStyle = ColorHelpers.generateStyleForColor('bg', color);
 
   return (
-    <div className="qr-badge">
+    <div className={wrapperClassName} style={wrapperStyle}>
       {children}
-      <div className="qr-badge-content">{text}</div>
+      <div className={badgeClassName} style={badgeStyle}>{content}</div>
     </div>
   );
 }
 
 Badge.propTypes = {
-  text: PropTypes.node,
+  textColor: PropTypes.string,
+  content: PropTypes.node,
   color: PropTypes.string,
-  image: PropTypes.string
+  size: PropTypes.string,
+};
+
+Badge.defaultProps = {
+  color: 'main',
 };
 
 export default Badge;
