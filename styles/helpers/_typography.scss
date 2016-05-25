@@ -24,5 +24,6 @@
 .uppercase { text-transform: uppercase !important; }
 
 @each $size-name, $size in $font-sizes{
-  &.#{$size-name}-font-size { font-size: $size !important; }
+  &.#{$size-name}-font-size,
+  &.#{$size-name}-font-size * { font-size: $size !important; }
 }
