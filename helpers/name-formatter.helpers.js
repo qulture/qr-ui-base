@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 function getInitials(name) {
+  if(!name) return false;
   const nameParts = name.split(' ');
   let initials = '';
 
@@ -22,6 +23,7 @@ function getFirstName(fullName) {
 };
 
 function getFirstAndLastName(fullName) {
+  if(!fullName) return false;
   const nameParts = fullName.split(' ');
   if(_.size(nameParts) < 2) return _.first(nameParts);
   return _.first(nameParts) + ' ' + _.last(nameParts);
