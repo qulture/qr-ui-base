@@ -32,7 +32,7 @@ class Avatar extends Component {
 
   renderAvatar() {
     const { user, size } = this.props;
-    const initials = NameFormatter.getInitials(user.profile.name);
+    const initials = NameFormatter.getInitials(_.result(user, 'profile.name'));
     const image = false;
     const avatarClassName = `qr-avatar ${size}`;
     const avatarImageOrInitialsDOMItem = !image ? <div className="qr-initials">{initials}</div> : <img src={image} />;
