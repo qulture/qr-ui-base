@@ -13,7 +13,7 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use('fourseven:scss@3.4.3');
   api.use('wolves:bourbon@3.1.0');
-  api.use('cinn:react-form-helpers@0.0.1');
+  api.use('cinn:react-form-helpers@1.0.0');
 
   api.addAssets([
     'public/fonts/font-icons.eot',
