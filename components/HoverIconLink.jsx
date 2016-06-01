@@ -19,9 +19,9 @@ class HoverIconLink extends Component {
   }
 
   render() {
-    const { children, link, action, icon, iconBeforeText, color } = this.props;
+    let { children, link, action, icon, iconBeforeText, color, className } = this.props;
     const { hovering } = this.state;
-    const className = 'qr-hover-icon-link';
+    className += ` qr-hover-icon-link`;
     const style = ColorHelpers.generateStyleForColor('color', color);
 
     if(!hovering) return <div className={className} onMouseEnter={this.onMouseEnter}>{children}</div>;
@@ -43,12 +43,14 @@ HoverIconLink.propTypes = {
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
   iconBeforeText: PropTypes.bool,
+  className: PropTypes.string,
   link: PropTypes.string,
   action: PropTypes.func,
 };
 
 HoverIconLink.defaultProps = {
-  color: 'main'
+  color: 'main',
+  className: ''
 }
 
 export default HoverIconLink;
