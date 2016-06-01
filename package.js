@@ -1,6 +1,6 @@
 Package.describe({
   name: 'qulture:qr-ui-base',
-  version: '0.1.8',
+  version: '0.1.9',
   summary: 'QR base react components and styles',
   git: 'https://github.com/qulture/qr-ui-base',
   documentation: 'README.md'
