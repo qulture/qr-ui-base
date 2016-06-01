@@ -10,7 +10,7 @@ class Modal extends Component {
     this.renderFooter = this.renderFooter.bind(this);
     this.handleBodyClass = this.handleBodyClass.bind(this);
     // Init
-    this.handleBodyClass(props);
+    this.handleBodyClass(props, true);
   }
 
   componentWillReceiveProps(newProps) {
@@ -25,15 +25,23 @@ class Modal extends Component {
     this.handleBodyClass({});
   }
 
-  handleBodyClass(newProps) {
-    !!newProps.open ? $('body').addClass('no-scroll') : $('body').removeClass('no-scroll');
+  handleBodyClass(newProps, fromConstructor) {
+    if(!!newProps.open) {
+      $('body').addClass('no-scroll')
+    } else {
+      if(!fromConstructor) $('body').removeClass('no-scroll');
+    }
   }
 
   submitHandler(event) {
     if(!!event) event.preventDefault();
     const { onSubmit, onClose } = this.props;
-    if(onSubmit) onSubmit();
-    if(onClose) onClose();
+    let shouldClose = true;
+    if(!!onSubmit) {
+      const result = onSubmit();
+      if(!_.isUndefined(result)) shouldClose = result;
+    }
+    if(!!onClose && shouldClose) onClose();
   }
 
   stopParentClickPropagation(event) {
