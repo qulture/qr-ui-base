@@ -44,8 +44,7 @@ $boxed-sides-padding: $input-padding;
   &.border-left {
     border-left: 1px solid $detail-3-color;
 
-    .qr-boxed-wrapper {
-      border-left: none;
-    }
+    .qr-boxed-wrapper { border-left: none; }
+    .qr-boxed-wrapper .qr-boxed-wrapper { border-left: solid 1px; }
   }
 }
