@@ -4,7 +4,7 @@ function PanelHeader(props) {
   const { children } = props;
 
   return (
-    <div className="qr-panel-header">
+    <div className="qr-panel-header qr-grid">
       {children}
     </div>
   );
