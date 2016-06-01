@@ -13,6 +13,7 @@ import Link from './Link';
 import Loading from './Loading';
 import Markdown from './Markdown';
 import PeriodsBar from './PeriodsBar';
+import PersonaAvatar from './PersonaAvatar';
 import Profile from './Profile';
 import Separator from './Separator';
 import Text from './Text';
@@ -36,6 +37,7 @@ export {
   Loading,
   Markdown,
   PeriodsBar,
+  PersonaAvatar,
   Profile,
   Separator,
   Text,
