@@ -53,9 +53,13 @@ class VerticalSlider extends Component {
   submitHandler(event) {
     const { onSubmit, onClose } = this.props;
     const { currentValue } = this.state;
+    let shouldClose = true;
     if(!!event) event.preventDefault();
-    if(!!onSubmit) onSubmit(currentValue);
-    if(!!onClose) onClose();
+    if(!!onSubmit) {
+      const result = onSubmit(currentValue);
+      if(!_.isUndefined(result)) shouldClose = result;
+    }
+    if(!!onClose && shouldClose) onClose();
   }
 
   stopParentClickPropagation(event) {
