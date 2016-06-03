@@ -1,5 +1,6 @@
 $small-badge-size: rem(12);
 $badge-size: rem(20);
+$large-badge-size: rem(24);
 
 .qr-badge{
   position: relative;
@@ -26,6 +27,13 @@ $badge-size: rem(20);
       border-radius: $small-badge-size;
       height: $small-badge-size;
       min-width: $small-badge-size;
+    }
+
+    &.large {
+      font-size: $s-font-size;
+      border-radius: $large-badge-size;
+      height: $large-badge-size;
+      min-width: $large-badge-size;
     }
   }
 
