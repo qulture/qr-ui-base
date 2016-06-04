@@ -5,16 +5,16 @@ $transparent-panel-link-border-color: transparentize($light-detail-1-color, 0.8)
   background: white;
   margin-bottom: 2 * $gutter;
 
-  &.with-side-content {
-    @include display(flex);
-    @include justify-content(space-between);
-    @include align-items(center);
-    @include flex-wrap(wrap);
-
-    .qr-side-content {
-      width: 30%;
-    }
-  }
+  // &.with-side-content {
+  //   @include display(flex);
+  //   @include justify-content(space-between);
+  //   @include align-items(center);
+  //   @include flex-wrap(wrap);
+  //
+  //   .qr-side-content {
+  //     width: 30%;
+  //   }
+  // }
 }
 
 .qr-panel-content {
@@ -24,6 +24,10 @@ $transparent-panel-link-border-color: transparentize($light-detail-1-color, 0.8)
   & > div,
   & > p {
     color: $detail-2-color;
+  }
+
+  &.with-left-space {
+    margin-left: rem(78);
   }
 }
 
