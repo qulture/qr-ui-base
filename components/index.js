@@ -15,6 +15,7 @@ import Markdown from './Markdown';
 import PeriodsBar from './PeriodsBar';
 import PersonaAvatar from './PersonaAvatar';
 import Profile from './Profile';
+import Quote from './Quote';
 import Separator from './Separator';
 import Text from './Text';
 import Toggle from './Toggle';
@@ -39,6 +40,7 @@ export {
   PeriodsBar,
   PersonaAvatar,
   Profile,
+  Quote,
   Separator,
   Text,
   Toggle,
