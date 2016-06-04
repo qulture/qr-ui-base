@@ -1,19 +1,36 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
+import { Grid, GridItem } from './../grid';
+import Avatar from './../Avatar';
 
-function PanelHeader(props) {
-  const { children, grid } = props;
-  let className = 'qr-panel-header';
-  if(!!grid) className += ' qr-grid';
+class PanelHeader extends Component {
+  renderContentWithAvatar() {
+    const { children, avatar } = this.props;
+    return (
+      <Grid justify="start" align="center" noWrap>
+        <Avatar user={avatar} hideName />
+        <GridItem className="small-margin-left">{children}</GridItem>
+      </Grid>
+    )
+  }
 
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
+  render() {
+    const { children, grid, avatar } = this.props;
+    let className = 'qr-panel-header';
+    if(!!grid) className += ' qr-grid';
+
+    const contentDOMItem = !!avatar ? this.renderContentWithAvatar() : children;
+
+    return (
+      <div className={className}>
+        {contentDOMItem}
+      </div>
+    );
+  }
 }
 
 PanelHeader.propTypes = {
-  grid: PropTypes.bool
+  grid: PropTypes.bool,
+  avatar: PropTypes.object
 }
 
 export default PanelHeader;
