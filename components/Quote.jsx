@@ -4,6 +4,7 @@ import Text from './Text';
 
 function Quote(props) {
   const { children } = props;
+  if(!_.size(children)) return false;
 
   return (
     <Text {...props} >
