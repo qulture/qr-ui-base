@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 
 function ContainerContent(props) {
-  const { children, color, large, fullWidth, withSidebar, withSmallSidebar, withMediumSidebar, withPadding } = props;
-  let className = 'qr-container-content';
+  let { children, className, color, large, fullWidth, withSidebar, withSmallSidebar, withMediumSidebar, withPadding } = props;
+  className += ' qr-container-content';
   if(!!fullWidth) className += ' full-width';
   if(!!withSidebar) className += ' with-sidebar';
   if(!!withSmallSidebar) className += ' with-small-sidebar';
@@ -25,6 +25,11 @@ ContainerContent.propTypes = {
   withSmallSidebar: PropTypes.bool,
   withMediumSidebar: PropTypes.bool,
   withPadding: PropTypes.bool,
-}
+  className: PropTypes.string
+};
+
+ContainerContent.defaultProps = {
+  className: ''
+};
 
 export default ContainerContent;
