@@ -10,6 +10,12 @@
 .no-padding-left { padding-left: 0 !important; }
 .no-padding-right { padding-right: 0 !important; }
 
+.small-margin { margin: rem(12) !important };
+.small-margin-left { margin-left: rem(12) !important };
+.small-margin-right { margin-right: rem(12) !important };
+.small-margin-top { margin-top: rem(12) !important };
+.small-margin-bottom { margin-bottom: rem(12) !important };
+
 .full-width { width: 100%; }
 .large-width { max-width: rem(640); }
 .medium-width { max-width: rem(482); }
