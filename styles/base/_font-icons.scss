@@ -39,6 +39,21 @@
   }
 }
 
+.icon-quotes-close {
+    &:before {
+        content: $icon-quotes-close;
+    }
+}
+.icon-quotes-open {
+    &:before {
+        content: $icon-quotes-open;
+    }
+}
+.icon-smile {
+    &:before {
+        content: $icon-smile;
+    }
+}
 .icon-caret-up {
     &:before {
         content: $icon-caret-up;
