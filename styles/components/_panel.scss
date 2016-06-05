@@ -88,4 +88,5 @@ $transparent-panel-link-border-color: transparentize($light-detail-1-color, 0.8)
   * { color: white; }
   .qr-panel-footer { border-color: $transparent-panel-link-border-color; }
   .qr-panel-footer-link { border-color: $transparent-panel-link-border-color; }
+  .qr-panel-content-list-item { border-color: transparentize($light-detail-1-color, 0.8); }
 }
