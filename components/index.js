@@ -12,7 +12,6 @@ import IconLink from './IconLink';
 import Link from './Link';
 import Loading from './Loading';
 import Markdown from './Markdown';
-import PeriodsBar from './PeriodsBar';
 import PersonaAvatar from './PersonaAvatar';
 import Quote from './Quote';
 import Separator from './Separator';
@@ -36,7 +35,6 @@ export {
   Link,
   Loading,
   Markdown,
-  PeriodsBar,
   PersonaAvatar,
   Quote,
   Separator,

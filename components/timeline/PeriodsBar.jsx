@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import moment from 'moment';
 import React, { Component, PropTypes } from 'react';
+import HorizontalTimeline from './HorizontalTimeline';
+import HorizontalTimelineItem from './HorizontalTimelineItem';
 
 class PeriodsBar extends Component {
   renderPeriodsItems() {
@@ -12,15 +14,11 @@ class PeriodsBar extends Component {
     const displayIndexes = _.range(indexOfActivePeriod - 3, indexOfActivePeriod + 4)
 
     const periodsItemsDOMItem = _.map(displayIndexes, function(index) {
-      if (index < 0 || index >= _.size(periods)) {
-        return <div key={index} className="qr-period-item inactive"></div>;
-      } else {
-        const item = periods[index];
-        let className = 'qr-period-item';
-        if(index === indexOfActivePeriod) className += ' active';
-        const onClick = onSelectPeriod ? onSelectPeriod.bind(null, item) : undefined;
-        return <a key={item.start} onClick={onClick} className={className}>{item.name}</a>;
-      }
+      if (index < 0 || index >= _.size(periods)) return <HorizontalTimelineItem key={index} inactive />;
+      const item = periods[index];
+      const active = index === indexOfActivePeriod;
+      const onClick = onSelectPeriod ? onSelectPeriod.bind(null, item) : undefined;
+      return <HorizontalTimelineItem key={item.start} action={onClick} active={active}>{item.name}</HorizontalTimelineItem>;
     });
 
     return periodsItemsDOMItem;
@@ -30,9 +28,9 @@ class PeriodsBar extends Component {
     const periodsItemsDOMItem = this.renderPeriodsItems();
 
     return (
-      <div className="qr-periods-bar hide-s">
+      <HorizontalTimeline>
         {periodsItemsDOMItem}
-      </div>
+      </HorizontalTimeline>
     );
   }
 }
