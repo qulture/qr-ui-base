@@ -1,4 +1,4 @@
-$boxed-top-bottom-padding: rem(6);
+$boxed-top-bottom-padding: rem(12);
 $boxed-sides-padding: $input-padding;
 
 .qr-boxed-wrapper {
@@ -15,6 +15,11 @@ $boxed-sides-padding: $input-padding;
   .qr-grid-item { align-self: center; }
   &.larger-padding-right { padding-right: rem(82); }
   &.no-padding { padding: 0; }
+
+  &.larger-min-padding-top-bottom {
+    padding-top: 2.5 * $boxed-top-bottom-padding;
+    padding-bottom: 2.5 * $boxed-top-bottom-padding;
+  }
 }
 
 .qr-boxed-group,
