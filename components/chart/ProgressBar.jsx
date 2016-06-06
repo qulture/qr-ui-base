@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 
 function ProgressBar(props) {
   const { min, max, value, sufix, prefix } = props;
-  const lineWidth = (value / (max - min)) * 100;
-  const lineStyle = { width: `${lineWidth}%` };
+  const lineSize = (value / (max - min)) * 100;
+  const lineStyle = { width: `${lineSize}%` };
 
   return (
     <div className="qr-progress-bar-wrapper">
