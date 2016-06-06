@@ -4,7 +4,7 @@ function HorizontalTimeline(props) {
   const { children } = props;
 
   return (
-    <div className="qr-periods-bar">
+    <div className="qr-horizontal-timeline">
       {children}
     </div>
   );

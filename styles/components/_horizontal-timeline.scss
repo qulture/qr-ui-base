@@ -1,9 +1,9 @@
-.qr-periods-bar {
+.qr-horizontal-timeline {
   @include display(flex);
   margin: rem(22) 0 rem(52) 0;
 }
 
-.qr-period-item {
+.qr-horizontal-timeline-item {
   display: block;
   @include display(flex);
   @include align-items(center);

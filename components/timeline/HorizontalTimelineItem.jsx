@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 function HorizontalTimelineItem(props) {
   const { children, active, link, action, inactive } = props;
-  let className = 'qr-period-item';
+  let className = 'qr-horizontal-timeline-item';
   if(active) className += ' active';
   if(inactive) className += ' inactive';
 
