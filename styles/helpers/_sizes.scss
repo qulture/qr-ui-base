@@ -16,6 +16,20 @@
 .small-margin-top { margin-top: rem(12) !important };
 .small-margin-bottom { margin-bottom: rem(12) !important };
 
+@each $size-name, $size in $sizes{
+  &.#{$size-name}-margin { margin: $size !important; }
+  &.#{$size-name}-margin-left { margin-left: $size !important; }
+  &.#{$size-name}-margin-right { margin-right: $size !important; }
+  &.#{$size-name}-margin-top { margin-top: $size !important; }
+  &.#{$size-name}-margin-bottom { margin-bottom: $size !important; }
+
+  &.#{$size-name}-padding { padding: $size !important; }
+  &.#{$size-name}-padding-left { padding-left: $size !important; }
+  &.#{$size-name}-padding-right { padding-right: $size !important; }
+  &.#{$size-name}-padding-top { padding-top: $size !important; }
+  &.#{$size-name}-padding-bottom { padding-bottom: $size !important; }
+}
+
 .full-width { width: 100%; }
 .large-width { max-width: rem(640); }
 .medium-width { max-width: rem(482); }

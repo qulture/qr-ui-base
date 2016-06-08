@@ -1,0 +1,21 @@
+$xxx-small-size: rem(2);
+$xx-small-size: rem(6);
+$x-small-size: rem(8);
+$small-size: rem(12);
+$medium-size: rem(18);
+$large-size: rem(22);
+$x-large-size: rem(29);
+$xx-large-size: rem(36);
+$xxx-large-size: rem(42);
+
+$sizes: (
+  ('xxx-small', $xxx-small-size),
+  ('xx-small', $xx-small-size),
+  ('x-small', $x-small-size),
+  ('small', $small-size),
+  ('medium', $medium-size),
+  ('large', $large-size),
+  ('x-large', $x-large-size),
+  ('xx-large', $xx-large-size),
+  ('xxx-large', $xxx-large-size),
+);
