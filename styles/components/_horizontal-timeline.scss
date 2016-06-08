@@ -4,6 +4,7 @@
   margin-top: rem(42);
 }
 
+a.qr-horizontal-timeline-item,
 .qr-horizontal-timeline-item {
   display: block;
   @include display(flex);
@@ -16,11 +17,11 @@
   border-bottom: solid 1px;
   border-color: $light-detail-1-color;
   font-size: $font-size;
-  color: $detail-1-color;
+  color: $detail-2-color;
   padding: rem(12);
 
-
   &.active {
+    color: $detail-1-color;
     font-size: $m-font-size;
     border: solid 1px;
     border-color: $light-detail-1-color;
