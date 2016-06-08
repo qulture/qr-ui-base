@@ -9,6 +9,8 @@ input[type='file'],
   font-size: $font-size;
   border: none;
   min-height: rem(60);
+
+  &.small-height { min-height: rem(30); }
 }
 
 textarea {

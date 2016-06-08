@@ -8,9 +8,10 @@ class InputText extends Component {
   componentDidMount() { focusInputByRef(this); }
 
   render() {
-    const { type, value, placeholder, label, onChange, color, rightContent, leftContent, focus, onlyInput } = this.props;
+    let { className, type, value, placeholder, label, onChange, color, rightContent, leftContent, focus, onlyInput, smallHeight } = this.props;
     const ref = !!focus ? 'focus' : '';
-    const inputProps = { ref, value, placeholder, onChange };
+    if(!!smallHeight) className += ' small-height';
+    const inputProps = { ref, value, placeholder, onChange, className };
 
     let inputDOMItem = <input type={type} {...inputProps} />;
     if(type === 'textarea') inputDOMItem = <TextareaAutosize minRows={5} {...inputProps} />;
@@ -41,6 +42,8 @@ InputText.propTypes = {
   leftContent: PropTypes.node,
   focus: PropTypes.bool,
   onlyInput: PropTypes.bool,
+  smallHeight: PropTypes.bool,
+  className: PropTypes.string,
 }
 
 InputText.defaultProps = {
