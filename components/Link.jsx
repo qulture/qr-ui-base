@@ -12,7 +12,8 @@ function Link(props) {
     className
   };
 
-  const childrenDOMItem = <Text {...props}>{children}</Text>;
+  const childrenProps = _.omit(props, ['className']);
+  const childrenDOMItem = <Text {...childrenProps}>{children}</Text>;
 
   if(isSubmit) return <button type="submit" {...commonProps}>{childrenDOMItem}</button>;
   return <a {...commonProps}>{childrenDOMItem}</a>;
