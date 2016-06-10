@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 function Grid(props) {
-  let { className,direction, fullHeight, align, children, noWrap, justify, boxed, fixed } = props;
+  let { className, style, direction, fullHeight, align, children, noWrap, justify, boxed, fixed } = props;
 
   className += ` qr-grid ${direction}-direction ${align}-align justify-${justify}`;
   if(!!fullHeight) className += ' full-height';
@@ -10,7 +10,7 @@ function Grid(props) {
   if(!!fixed) className += ' fixed';
 
   return (
-    <div className={className}>
+    <div className={className} style={style}>
       {children}
     </div>
   );
@@ -24,7 +24,8 @@ Grid.propTypes = {
   noWrap: PropTypes.bool,
   boxed: PropTypes.bool,
   fixed: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
+  style: PropTypes.object
 };
 
 Grid.defaultProps = {
