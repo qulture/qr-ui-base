@@ -2,7 +2,7 @@
   z-index: 130;
   @include size(100%);
   @include position(fixed, 0 0 0 0);
-  background: transparentize(white, 0.2);
+  background: transparentize(white, 0.1);
   overflow: scroll;
 }
 
