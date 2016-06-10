@@ -1,0 +1,26 @@
+.qr-list-modal {
+  margin: rem(40) auto;
+  background: white;
+  max-width: rem(580);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.qr-list-modal-content {
+  border: solid 1px $light-detail-1-color;
+  border-top: none;
+}
+
+.qr-list-modal-header {
+  @include main-background-color;
+  padding: $large-size;
+  &, * { color: white };
+}
+
+.qr-list-modal-item {
+  display: block;
+  border-bottom: solid 1px $light-detail-2-color;
+  padding: $small-size $large-size;
+}
