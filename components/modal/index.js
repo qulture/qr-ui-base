@@ -4,6 +4,7 @@ import ModalContent from './ModalContent';
 import ModalFooter from './ModalFooter';
 import ListModal from './ListModal';
 import ListModalItem from './ListModalItem';
+import ListModalFilterWrapper from './ListModalFilterWrapper';
 
 export {
   Modal,
@@ -11,5 +12,6 @@ export {
   ModalContent,
   ModalFooter,
   ListModal,
-  ListModalItem
+  ListModalItem,
+  ListModalFilterWrapper
 }
