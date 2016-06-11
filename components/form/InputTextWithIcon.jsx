@@ -6,9 +6,9 @@ class InputTextWithIcon extends Component {
   componentDidMount() { focusInputByRef(this); }
 
   render() {
-    const { type, value, placeholder, onChange, icon, iconColor, focus } = this.props;
+    const { type, value, placeholder, onChange, icon, iconColor, focus, onKeyUp } = this.props;
     const ref = !!focus ? 'focus' : '';
-    const inputProps = { type, ref, value, placeholder, onChange };
+    const inputProps = { type, ref, value, placeholder, onChange, onKeyUp };
 
     return (
       <label className="qr-input-with-icon">
@@ -27,6 +27,7 @@ InputTextWithIcon.propTypes = {
   icon: PropTypes.string.isRequired,
   iconColor: PropTypes.string,
   focus: PropTypes.bool,
+  onKeyUp: PropTypes.func,
 }
 
 InputTextWithIcon.defaultProps = {
