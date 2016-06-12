@@ -5,12 +5,49 @@
   2. [Semaphore Colors](#semaphore-colors)
   3. [Name formatter](#name-formatter)
 2. [CSS Helpers](#css-helpers):
-  1. [General](#general)
-  2. [Typography](#typography)
-  2. [Sizes](#sizes)
-  3. [Colors](#colors)
-  4. [Borders](#borders)
-3. Components
+  1. [General](#general-css-helpers)
+  2. [Typography](#typography-css-helpers)
+  2. [Sizes](#sizes-css-helpers)
+  3. [Colors](#colors-css-helpers)
+  4. [Borders](#borders-css-helpers)
+3. [Components](#components):
+  1. [General](#general-components):
+    1. [ArrowBetweenUsers](#arrowbetweenusers)
+    2. [Avatar](#Avatar)
+    3. [AvatarInfo](#AvatarInfo)
+    4. [AvatarGrid](#AvatarGrid)
+    5. [Badge](#Badge)
+    6. [DatePicker](#DatePicker)
+    7. [Growl](#Growl)
+    8. [HoverIconLink](#HoverIconLink)
+    9. [Icon](#Icon)
+    10. [IconDropdown](#IconDropdown)
+    11. [IconLink](#IconLink)
+    12. [Link](#Link)
+    13. [Loading](#Loading)
+    14. [Markdown](#Markdown)
+    15. [PersonaAvatar](#PersonaAvatar)
+    16. [Quote](#Quote)
+    17. [Separator](#Separator)
+    18. [Text](#Text)
+    19. [Toggle](#Toggle)
+    20. [Tooltip](#Tooltip)
+    21. [VerticalSlider](#VerticalSlider)
+  2. [Boxed](#Boxed)
+  3. [Button](#Buttons)
+  4. [Charts](#Charts)
+  5. [Containers](#Containers)
+  6. [Dropdowns](#Dropdowns)
+  7. [Forms](#Forms)
+  8. [Grids](#Grids)
+  9. [Modals](#Modals)
+  10. [Panels](#Panels)
+  11. [Sidebars](#Sidebars)
+  12. [Tabs](#Tabs)
+  13. [Tables](#Tables)
+  14. [Timelines](#Timelines)
+  15. [Wizards](#Wizards)
+
 
 -----------------------------
 
@@ -95,12 +132,12 @@ Returns the first and last name of the fullName param
 
 # CSS Helpers
 
-## General
+## General CSS Helpers
  - `clicable`: Pointer cursor on hover
  - `clearfix`: Clear after
  - `bloc`: Display block
 
-## Typography
+## Typography CSS Helpers
 **Font sizes names:** `xxxl, xxl, xl, l, default, m, s, xs, xxs, xxxs`
 
  - `selector`: Larger font with main color
@@ -121,7 +158,7 @@ Returns the first and last name of the fullName param
  - `${fontSizeName}-font-size`: Customize the font size (fontSizeName could be any of the [font sizes names](#typography))
 
 
-## Sizes
+## Sizes CSS Helpers
 **Size names:** `xxx-large, xx-large, x-large, large, medium, small, x-small, xx-small, xxx-small`
   
   - `full-width`: Takes 100% of the width
@@ -150,7 +187,7 @@ Returns the first and last name of the fullName param
   - `${sizeName}-margin-bottom`: Custom margin on bottom (sizeName could be any of the [size names](#sizes))
 
 
-## Colors
+## Colors CSS Helpers
 **Color names:** 
 ```
 main, admin, employee, white,
