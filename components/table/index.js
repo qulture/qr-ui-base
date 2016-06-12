@@ -4,6 +4,7 @@ import TableBody from './TableBody';
 import TableRow from './TableRow';
 import TableCell from './TableCell';
 import TableHeaderCell from './TableHeaderCell';
+import TableFiltersWrapper from './TableFiltersWrapper';
 
 export {
   Table,
@@ -11,5 +12,6 @@ export {
   TableBody,
   TableRow,
   TableCell,
-  TableHeaderCell
+  TableHeaderCell,
+  TableFiltersWrapper
 };
